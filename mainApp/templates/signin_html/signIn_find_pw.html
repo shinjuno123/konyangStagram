@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>비밀번호 찾기</title>
+
+    <link rel="stylesheet" href="../css/signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+
+</head>
+<body>
+    <section id="container">
+        <header id="header">
+            <section class="inner">
+                <h1 class="logo">
+                    <a href="signIn_main.html">
+                        <div class="logo_text">Together</div>
+                    </a>
+                    <div class="explain_text">아이디/비밀번호 찾기</div>
+                </h1>
+            </section>
+        </header>
+
+        <form class="input_box">
+            <div class="find_box">
+                <a class="find_id_on" href="signIn_find_id.html">아이디 찾기</a>
+                <a class="find_pw_on" href="signIn_find_pw.html">비밀번호 찾기</a>
+            </div>
+            <input type="text" placeholder="가입한 아이디를 입력하세요." id="signedupId">
+            <input type="text" placeholder="가입한 이메일을 입력하세요." id="useremail">
+            <input type="submit" value="비밀번호 찾기" id="pwfind_btn" onclick="location.href='main.html'">
+        </form>
+    </section>
+
+    <script src="../js/signin.js"></script>
+</body>
+</html>
