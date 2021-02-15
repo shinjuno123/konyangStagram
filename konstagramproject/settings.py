@@ -76,8 +76,15 @@ WSGI_APPLICATION = 'konstagramproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'konstagram-main-db',
+        'USER': 'admin',
+        'PASSWORD': '!Wnsgh2945',
+        'HOST' : 'konstagram-main-rds.c2lst3mtusau.ap-northeast-2.rds.amazonaws.com',
+        'PORT': '3306',
+        'OPTIONS':{
+             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
 }
 
