@@ -46,6 +46,56 @@ header i:hover{
     height: 25px;
 }
 
+/* 실시간 인기 검색어 */
+.realtimeSearch{
+    position: relative;
+    display: inline-block;
+}
+
+.realtimeSearch-span{
+    font-size: 12px;
+}
+
+.realtimeSearch-dropdown{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.realtimeSearch-dropdown a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.realtimeSearch-dropdown a:hover{
+    color: #ff8a3d;
+}
+
+.realtimeSearch:hover .realtimeSearch-dropdown{
+    display: block;
+}
+
+.realtimeSearch:hover .realtimeSearch-span{
+    color: #ff8a3d;
+}
+
+/* 로그인 회원가입 */
+#login, #signup{
+    font-size: 12px;
+    outline: none;
+}
+
+#login:hover, #signup:hover{
+    color: #ff8a3d;
+    cursor: pointer;
+}
+
+
 /* Chart Components */
 .chart{
     display: flex;
@@ -102,17 +152,7 @@ header i:hover{
     height: 400px;
 }
 
-/* 실시간 검색어, 전체게시판, 공지사항, 질의응답 사이드 */
-.realtimeSearch{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    height: 270px;
-    padding: 0 32px;
-    margin-bottom: 8px;
-}
-
+/* 전체게시판, 공지사항, 질의응답 사이드 */
 .noticeBoard, 
 .notice, 
 .topProject,
@@ -126,7 +166,6 @@ header i:hover{
     margin-bottom: 8px;
 }
 
-.realtimeSearch span, 
 .noticeBoard span, 
 .notice span, 
 .topProject span,
@@ -136,50 +175,12 @@ header i:hover{
     margin-bottom: 4px;
 }
 
-.realtimeSearch li {
-    margin-left: 24px;
-}
-
-.realtimeSearch li:hover, 
 .noticeBoard li:hover, 
 .notice li:hover, 
 .topProject li:hover,
 .question li:hover{
     color: #ff8a3d;
     cursor: pointer;
-}
-
-/* 로그인 회원가입 사이드 */
-.loginArea{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 16px;
-}
-
-#btn_login, #btn_signup{
-    width: 70%;
-    height: 30%;
-    padding: 8px;
-    margin: 2px;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    outline: none;
-}
-
-#btn_login:hover, #btn_signup:hover{
-    background-color: #ff8a3d;
-    transition: 0.3s;
-    color: white;
-    cursor: pointer;
-}
-
-#btn_login:active, #btn_signup:active{
-    background-color: #ffa568;
 }
 
 

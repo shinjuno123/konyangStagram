@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainApp',
+    'mainApp.apps.MainappConfig',
 ]
 
 MIDDLEWARE = [
@@ -75,17 +75,17 @@ WSGI_APPLICATION = 'konstagramproject.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'konstagram-main-db',
-        'USER': 'admin',
-        'PASSWORD': '!Wnsgh2945',
-        'HOST' : 'konstagram-main-rds.c2lst3mtusau.ap-northeast-2.rds.amazonaws.com',
-        'PORT': '3306',
-        'OPTIONS':{
-             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        },
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'konstagram-main-db',
+    #     'USER': 'admin',
+    #     'PASSWORD': '!Wnsgh2945',
+    #     'HOST' : 'konstagram-main-rds.c2lst3mtusau.ap-northeast-2.rds.amazonaws.com',
+    #     'PORT': '3306',
+    #     'OPTIONS':{
+    #          'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+    #     },
+    # }
 }
 
 
