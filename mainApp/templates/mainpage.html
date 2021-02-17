@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/mainpage.css">
+    <link rel="stylesheet" href="../static/css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script
       src="https://kit.fontawesome.com/bc1f5db172.js"
@@ -36,10 +37,56 @@
     </header>
 
     <section class="chart">
-        <!-- Left Chart -->
-        <ul class="leftChart">
-            
+        <!-- Center Chart -->
+        {% block content %}
+        <ul class="centerChart">
+            <li class="post">
+                <div class="postTop">
+                    <span>joker</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <img class="post1" src="../static/images/joker.jpg">
+                <div class="postBottom">
+                    <span>더보기</span>
+                    <div class="postIcon">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                </div>
+            </li>
+            <li class="post">
+                <div class="postTop">
+                    <span>haha ha moo</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <img class="post1" src="../static/images/hahaha.jpg">
+                <div class="postBottom">
+                    <span>더보기</span>
+                    <div class="postIcon">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                </div>
+            </li>
+            <li class="post">
+                <div class="postTop">
+                    <span>Dick Hunter Yorkmang</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <img class="post1" src="../static/images/dickH.jpg">
+                <div class="postBottom">
+                    <span>더보기 </span>
+                    <div class="postIcon">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        {% endblock %}
 
+        <!-- Right Chart -->
+        <ul class="rightChart">
             <ul class="noticeBoard">
                 <span><i class="fas fa-clipboard"></i>전체 게시판</span>
                 <li id="a2">의료IT공학과</li>
@@ -54,58 +101,7 @@
                 <li id="n2">수강신청</li>
                 <li id="n3">등록금 납부</li>
             </ul>
-        </ul>
 
-        <!-- Center Chart -->
-        {% block content %}
-        <ul class="centerChart">
-            <li class="post">
-                <div class="postTop">
-                    <span>joker</span>
-                    <i class="fas fa-ellipsis-h"></i>
-                </div>
-                <img class="post1" src="../static/images/joker.jpg">
-                <div class="postBottom">
-                    <span>댓글</span>
-                    <div class="postIcon">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-thumbs-up"></i>
-                    </div>
-                </div>
-            </li>
-            <li class="post">
-                <div class="postTop">
-                    <span>haha ha moo</span>
-                    <i class="fas fa-ellipsis-h"></i>
-                </div>
-                <img class="post1" src="../static/images/hahaha.jpg">
-                <div class="postBottom">
-                    <span>댓글</span>
-                    <div class="postIcon">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-thumbs-up"></i>
-                    </div>
-                </div>
-            </li>
-            <li class="post">
-                <div class="postTop">
-                    <span>Dick Hunter Yorkmang</span>
-                    <i class="fas fa-ellipsis-h"></i>
-                </div>
-                <img class="post1" src="../static/images/dickH.jpg">
-                <div class="postBottom">
-                    <span>댓글</span>
-                    <div class="postIcon">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-thumbs-up"></i>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        {% endblock %}
-
-        <!-- Right Chart -->
-        <ul class="rightChart">
             <ul class="topProject">
                 <span><i class="fas fa-fire"></i>인기 프로젝트</span>
                 <li id="hp1">의료IT 프로젝트</li>
@@ -137,6 +133,6 @@
         </div>
     </div>
 
-    <script src="../static/mainpage.js"></script>
+    <script src="../static/js/mainpage.js"></script>
 </body>
 </html>
