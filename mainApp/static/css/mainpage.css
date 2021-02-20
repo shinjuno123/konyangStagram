@@ -1,0 +1,305 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(248, 248, 248);
+    height: 2000px;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/*  Header */
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+}
+
+header i{
+    margin-left: 8px;
+}
+
+header i:hover{
+    color: #757575;
+    cursor: pointer;
+}
+
+#search{
+    width: 250px;
+    height: 25px;
+}
+
+/* 실시간 인기 검색어 */
+.realtimeSearch{
+    position: relative;
+    display: inline-block;
+}
+
+.realtimeSearch-span{
+    font-size: 12px;
+}
+
+.realtimeSearch-dropdown{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.realtimeSearch-dropdown a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.realtimeSearch-dropdown a:hover{
+    color: #ff8a3d;
+}
+
+.realtimeSearch:hover .realtimeSearch-dropdown{
+    display: block;
+}
+
+.realtimeSearch:hover .realtimeSearch-span{
+    color: #ff8a3d;
+}
+
+/* 로그인 회원가입 */
+#login, #signup{
+    font-size: 12px;
+    outline: none;
+}
+
+#login:hover, #signup:hover{
+    color: #ff8a3d;
+    cursor: pointer;
+}
+
+
+/* Chart Components */
+.chart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 32px;
+    
+}
+
+.leftChart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    top: 64px;
+    left: 0;
+}
+
+.leftChart i{
+    color: #ff8a3d;
+    margin-right: 8px;
+}
+
+.rightChart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    top: 64px;
+    right: 0;
+}
+
+.rightChart i{
+    color:#ff8a3d;
+    margin-right: 8px
+}
+
+.centerChart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 100vh;
+}
+
+.centerChart img{
+    width: 600px;
+    height: 400px;
+}
+
+/* 전체게시판, 공지사항, 질의응답 사이드 */
+.noticeBoard, 
+.notice, 
+.topProject,
+.question{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 150px;
+    padding: 0 32px;
+    margin-bottom: 8px;
+}
+
+.noticeBoard span, 
+.notice span, 
+.topProject span,
+.question span{
+    font-size: 18px;
+    border-bottom: 2px solid #ff8a3d;
+    margin-bottom: 4px;
+}
+
+.noticeBoard li:hover, 
+.notice li:hover, 
+.topProject li:hover,
+.question li:hover{
+    color: #ff8a3d;
+    cursor: pointer;
+}
+
+
+/* 게시물 */
+.post{
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    background-color: white;
+    margin-bottom: 8px;
+}
+
+.post i:hover{
+    color: #757575;
+    cursor: pointer;
+}
+
+.postTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.postBottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.fa-star, .fa-thumbs-up{
+    margin-left: 4px;
+}
+
+/* 채팅 버튼 */
+.btn_chat{
+    position: fixed;
+    display: block;
+    top: 85%;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: #ff8a3d;
+}
+
+.btn_chat:hover{
+    background-color: #ffa568;
+}
+
+.fa-comments{
+    color: white;
+    font-size: 18px;
+}
+
+/* 채팅 영역 */
+.chatArea{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    top: 50%;
+    right: 1%;
+    width: 300px;
+    height: 340px;
+    border-radius: 4px;
+    background-color: #ffbf94;
+}
+
+.chat-contents{
+    height: 80%;
+}
+
+.infoArea{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+}
+
+.chat-room-name{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    font-size: 16px;
+    background-color: #ffa568;
+    padding-left: 4px;
+}
+
+.chatClose{
+    font-size: 18px;
+    width: 10%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.inputArea{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+}
+
+.enter-btn{
+    font-size: 18px;
+    width: 10%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.input-txt{
+    width: 90%;
+    font-size: 16px;
+    border: none;
+    background-color: #ffa568;
+    outline: none;
+    padding-left: 4px;
+}

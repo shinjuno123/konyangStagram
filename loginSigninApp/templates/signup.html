@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>회원가입</title>
+
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+
+</head>
+<body>
+    <section id="container">
+        <header id="header">
+            <section class="inner">
+                <h1 class="logo">
+                    <a href="signup.html">
+                        <div class="logo_text">Together</div>
+                    </a>
+                    <div class="explain_text">본인인증</div>
+                </h1>
+            </section>
+        </header>
+
+        <!-- 본인인증 폼 -->
+        <form class="input_box" id="cfForm">
+            <input type="text" placeholder="이름을 입력하세요." class="username">
+            <input type="text" placeholder="전화번호를 입력하세요." id="userphone">
+            <input type="submit" value="본인 인증하기" id="certification" >
+            <div id="cf_box">
+                <input type="text" placeholder="인증번호를 입력하세요." id="cf_num">
+                <div class="timer">3:00</div>
+                <a id="cf_btn">인증</a>
+            </div>
+            <div id="next">다음</div>
+        </form>
+
+        <!-- 회원가입 폼 -->
+        <form class="input_box" id="signupForm">
+            <input type="text" placeholder="이름을 입력하세요." class="username">
+            <select id="usernum">
+                <option value="none" hidden >학번을 선택하세요.</option>
+                <option value="21">21학번</option>
+                <option value="20">20학번</option>
+                <option value="19">19학번</option>
+                <option value="18">18학번</option>
+                <option value="17">17학번</option>
+                <option value="16">16학번</option>
+                <option value="15">15학번</option>
+            </select>
+            <i class="fas fa-sort-down" id="select_num"></i>
+            <select id="userdept" >
+                <option value="none" hidden>학과를 선택하세요.</option>
+                <option value="의료IT공학과">의료IT공학과</option>
+                <option value="의공학과">의공학과</option>
+                <option value="의료공긴디자인학과">의료공간디자인학과</option>
+                <option value="제약생명공학과">제약생명공학과</option>
+                <option value="의료인공지능학과">의료인공지능학과</option>
+                <option value="의료신소재학과">의료신소재학과</option>
+            </select>
+            <i class="fas fa-sort-down" id="select_dept"></i>
+            <input type="text" placeholder="이메일을 입력하세요." id="useremail">
+            <input type="text" placeholder="아이디를 입력하세요." id="userid">
+            <input type="password" placeholder="비밀번호를 입력하세요." id="userpw">
+            <input type="submit" value="회원가입" id="signup_btn" onclick="location.href = './signin.html'">
+        </form>
+    </section>
+
+    <script src="{% static 'js/signup.js' %}"></script>
+</body>
+</html>

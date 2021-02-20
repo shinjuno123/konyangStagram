@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</html>
+
+
+<body>
+
+    <h1>Register Form</h1>
+    <form action="datacheck/" method="POST">
+        {% csrf_token %}
+    <section class=register>
+    <div>
+        <div>
+            이름
+        </div>
+        <input type='text' placeholder='이름' name="user_name">
+        </div>
+    </div>
+    <div>
+        <div >
+            학번
+        </div>
+        <input type='text' placeholder='학번' name="student_num">
+        </div>
+    </div>
+    <div>
+        <div id=user_department >
+            학과
+        </div>
+        <input type='text' placeholder='학과' name="department">
+        </div>
+    </div>
+    <div>
+        <div id= user_email>
+            이메일
+        </div>
+        <input type='text' placeholder='이메일' name="user_email">
+        </div>
+    </div>
+    <div>
+        <div id = user_id>
+            아이디
+        </div>
+        <input type='text' placeholder='아이디' name="user_id">
+        </div>
+    </div>
+    <div>
+        <div id=user_pw>
+            비밀번호
+        </div>
+        <input type='text' placeholder='비밀번호' name="user_password">
+        </div>
+    </div>
+    </section>
+
+    <input type='submit' action='submit' value="제출" name=regist_btn>
+ </form>
+
+
+
+
+
+</body>

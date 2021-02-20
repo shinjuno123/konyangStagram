@@ -1,0 +1,341 @@
+body{
+    background: #fafafa;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#header{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.logo{
+    margin: 0px;
+}
+
+a {
+    text-decoration: none ;
+    cursor: pointer;
+}
+
+.logo_text {
+    font-size: 40px;
+	font-weight: bold;
+    font-style: italic;
+    color:#FF8A3D;
+    padding-bottom: 10px;
+}
+/* #FF8A3D; */
+.explain_text {
+    font-size: 20px;
+    color:black;
+    padding-bottom: 20px;
+    font-weight: normal;
+}
+
+.input_box {
+    border-radius: 20px;
+    border: 1px solid #bbbbbb;
+    width: 400px;
+    height: 360px;
+    background-color: white;
+}
+
+#userid {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    
+}
+
+#userid::placeholder {
+    color: #bbbbbb;
+    font-size: 13px;
+}
+
+#userpw {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+#userpw::placeholder {
+    color: #bbbbbb;
+    font-size: 13px;
+}
+
+.input_box>i{
+    position: absolute;
+    left: 82%;
+    top: 47%;
+    color: #bbbbbb;
+    cursor: pointer;
+}
+
+#signin_btn {
+    background-color: #FF8A3D;
+
+    width: 332px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #FF8A3D;
+    padding: 10px 15px;
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+
+.line {
+    width: 330px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 15%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+}
+
+.find {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 20%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.find>a {
+    color: black;
+}
+
+.signUp {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 20%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+}
+
+.signUp>a {
+    color: #FF8A3D;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+.find_box {
+    width: 332px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 15px;
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+
+.find_id {
+    width: 160px;
+    color: #FF8A3D;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 3px solid #FF8A3D;
+    text-align: center;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+.find_id_on{
+    width: 160px;
+    color: #bbbbbb;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 0px;
+    padding-bottom: 5px;
+}
+
+.find_pw {
+    width: 160px;
+    color: #bbbbbb;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 0px;
+    padding-bottom: 5px;
+}
+
+.find_pw_on{
+    width: 160px;
+    color: #FF8A3D;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 3px solid #FF8A3D;
+    text-align: center;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+#username {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    
+}
+
+#username::placeholder {
+    color: #bbbbbb;
+    font-size: 13px;
+}
+
+#signedupId {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    
+}
+
+#signedupId::placeholder {
+    color: #bbbbbb;
+    font-size: 13px;
+}
+
+#useremail {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+}
+
+#useremail::placeholder {
+    color: #bbbbbb;
+    font-size: 13px;
+}
+
+#idfind_btn {
+    background-color: #FF8A3D;
+
+    width: 332px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #FF8A3D;
+    padding: 10px 15px;
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    cursor:pointer;
+}
+
+#pwfind_btn {
+    background-color: #FF8A3D;
+
+    width: 332px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #FF8A3D;
+    padding: 10px 15px;
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    cursor:pointer;
+}

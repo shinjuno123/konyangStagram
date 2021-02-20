@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/mainpage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/bc1f5db172.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Konstargram</title>
+</head>
+<body>
+    <header>
+        <a href=""><img src="" alt="">로고</a>
+        <input type="text" placeholder="검색" id="search">
+        <div class="realtimeSearch">
+            <span class="realtimeSearch-span">
+                실시간 인기 검색어
+                <i class="fas fa-caret-down"></i>
+            </span>
+            <div class="realtimeSearch-dropdown">
+                <a href="#" id="s1">삼색이</a>
+                <a href="#" id="s2">야통이</a>
+                <a href="#" id="s3">무</a>
+            </div>
+        </div>
+            <div class="header-right">
+                <span id="login">로그인</span>
+                <span id="signup">회원가입</span>
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-user"></i>
+            </div>
+    </header>
+
+    <section class="chart">
+        <!-- Left Chart -->
+        <ul class="leftChart">
+            
+
+            <ul class="noticeBoard">
+                <span><i class="fas fa-clipboard"></i>전체 게시판</span>
+                <li id="a2">의료IT공학과</li>
+                <li id="a3">간호학과</li>
+                <li id="a4">의공학과</li>
+                <li id="a4">안녕</li>
+                <li id="a4">안녕</li>
+            </ul>
+
+            <ul class="notice">
+                <span><i class="fas fa-exclamation-triangle"></i>공지사항</span>
+                <li id="n2">수강신청</li>
+                <li id="n3">등록금 납부</li>
+            </ul>
+        </ul>
+
+        <!-- Center Chart -->
+        {% block content %}
+        <ul class="centerChart">
+            <li class="post">
+                <div class="postTop">
+                    <span>joker</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <img class="post1" src="../static/images/joker.jpg">
+                <div class="postBottom">
+                    <span>댓글</span>
+                    <div class="postIcon">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                </div>
+            </li>
+            <li class="post">
+                <div class="postTop">
+                    <span>haha ha moo</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <img class="post1" src="../static/images/hahaha.jpg">
+                <div class="postBottom">
+                    <span>댓글</span>
+                    <div class="postIcon">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                </div>
+            </li>
+            <li class="post">
+                <div class="postTop">
+                    <span>Dick Hunter Yorkmang</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <img class="post1" src="../static/images/dickH.jpg">
+                <div class="postBottom">
+                    <span>댓글</span>
+                    <div class="postIcon">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        {% endblock %}
+
+        <!-- Right Chart -->
+        <ul class="rightChart">
+            <ul class="topProject">
+                <span><i class="fas fa-fire"></i>인기 프로젝트</span>
+                <li id="hp1">의료IT 프로젝트</li>
+                <li id="hp2">의료IT 프로젝트</li>
+                <li id="hp3">의료IT 프로젝트</li>
+            </ul>
+
+            <ul class="question">
+                <span><i class="fas fa-question-circle"></i>질의응답</span>
+                <li id="n2">불편사항</li>
+            </ul>
+        </ul>
+    </section>
+
+    <!-- Floating Button -->
+    <button class="btn_chat">
+        <i class="far fa-comments"></i>
+    </button>
+
+    <div class="chatArea">
+        <div class="infoArea">
+            <span class="chat-room-name">의료IT공학과 채팅방</span>
+            <button class="chatClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-contents"></div>
+        <div class="inputArea">
+            <input class="input-txt" type="text">
+            <button class="enter-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="../static/mainpage.js"></script>
+</body>
+</html>
