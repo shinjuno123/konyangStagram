@@ -63,14 +63,6 @@ a {
     margin: 5px 0px;
 }
 
-#input2 {
-    display: none;
-}
-
-#input3 {
-    display: none;
-}
-
 #userid,
 #userpw,
 #signin_btn {
@@ -79,7 +71,7 @@ a {
     border-radius: 5px;
     border: 1px solid #bbbbbb;
     margin-bottom: 10px;
-
+    padding: 0px;
 }
 
 .input_box_detail{
@@ -91,25 +83,25 @@ a {
 #signin_btn {
     background-color: #FF8A3D;
     border: 1px solid #FF8A3D;
-    padding: 10px 15px;
     color: #fafafa;
     font-size: 18px;
     font-weight: bold;
     line-height: 30px;
     cursor: pointer;
-    margin-top: 10px;
+    margin: 10px 0 20px 0;
 }
 
 #userid::placeholder,
 #userpw::placeholder {
     color: #bbbbbb;
     font-size: 13px;
+    padding-left: 10px;
 }
 
 #showIcon{
     position: absolute;
     margin-left: 2px;
-    top: 50%;
+    top: 47%;
     transform: translate(-170%,-100%);
     color: #bbbbbb;
     cursor: pointer;

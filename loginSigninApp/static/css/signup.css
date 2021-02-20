@@ -14,21 +14,15 @@ body{
     border: 1px solid #bbbbbb;
     width: 400px;
     background-color: white;
+    padding: 20px 0px;
 }
 
-#header{
-    width: 400px;
-    display: flex;
-    align-items: center;
-}
+/* 로고 */
 #header .logo{
-    margin: 20px 15px;
     display: flex;
     align-items: center;
-    position: relative;
-    top: 50%;
-    left: 10%;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    margin: 0px;
 }
 
 a {
@@ -50,116 +44,60 @@ a {
     padding-left: 20px;
 }
 
-.username {
-    width: 300px;
-    height: 30px;
+
+/* 본인 인증 */
+#cfForm{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    position: relative;
-    top: 16%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    border: 1px solid #bbbbbb;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    
 }
 
-.username::placeholder {
-    color: #bbbbbb;
-    font-size: 13px;
-}
-
-#userphone {
-    width: 300px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    top: 16%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    border: 1px solid #bbbbbb;
-    padding: 10px 15px;
-    margin-bottom: 15px;
-}
-
-#userphone::placeholder {
-    color: #bbbbbb;
-    font-size: 13px;
-}
-
-
-/* #certification {
-    background-color: #FF8A3D;
-
+.username,
+#userphone,
+#certification,
+#cf_success {
     width: 332px;
     height: 52px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 17%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 5px;
-    border: 1px solid #FF8A3D;
-    padding: 10px 15px;
-    color: #fafafa;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 30px;
-    cursor: pointer;
-} */
+    border: 1px solid #bbbbbb;
+    margin-bottom: 10px;
+    padding: 0px;
+    
+}
 
 #certification {
     background-color: #FF8A3D;
 
-    width: 332px;
-    height: 52px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    border-radius: 5px;
-    border: 0px solid #FF8A3D;
-    padding: 0px;
+    border: 1px solid #FF8A3D;
     color: #fafafa;
     font-size: 18px;
     font-weight: bold;
     line-height: 52px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
+.username::placeholder,
+#userphone::placeholder {
+    color: #bbbbbb;
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+
+/* 본인인증 버튼 */
 #cf_box {
     width: 332px;
     height: 52px;
     display: none;
     align-items: center;
-    position: relative;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -40%);
+    margin: 10px 0;
 }
 
 #cf_num {
     background-color: #fafafa;
 
-    width: 80%;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    top: 50%;
-    left: 32%;
-    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 52px;
     border-radius: 5px;
     border: 1px solid #FF8A3D;
     padding-left: 10px;
@@ -173,25 +111,18 @@ a {
 
 .timer {
     color: #bbbbbb;
-    display: flex;
+    display: none;
     align-items: center;
-    position: relative;
+    position: absolute;
     font-size: 13px;
-    transform: translate(-140%, -10%);
+    transform: translate(55px, 245px);
 }
 
 #cf_btn {
     background-color: #FF8A3D;
 
-    width: 30%;
-    height: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 50%;
-    left: 14%;
-    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 52px;
     border-radius: 5px;
     border: 1px solid #FF8A3D;
     padding: 0px;
@@ -200,41 +131,28 @@ a {
     font-weight: bold;
     line-height: 50px;
     cursor: pointer;
-    margin: 10px;
+    margin-left: 12px;
 }
 
 #cf_success {
     background-color: #bbbbbb;
-
-    width: 332px;
-    height: 52px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    border-radius: 5px;
-    border: 0px;
-    padding: 0px;
+    border: 1px solid #bbbbbb;
     color: #fafafa;
     font-size: 18px;
     font-weight: bold;
     line-height: 52px;
+    cursor: default;
+    margin-top: 10px;
+    justify-content: center;
 }
 
-#next {
+
+#next,
+#next_on {
     background-color: #FFC198;
 
-    width: 100px;
+    width: 80px;
     height: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    left: 80%;
-    transform: translate(-45%,-20%);
     border-radius: 5px;
     border: 1px solid #FFC198;
     padding: 0px;
@@ -242,67 +160,44 @@ a {
     font-size: 18px;
     font-weight: bold;
     line-height: 50px;
-    margin: 10px;
+    margin: 10px 33px 10px auto;
+    text-align: center;
+
 }
 
 #next_on {
     background-color: #FF8A3D;
-
-    width: 100px;
-    height: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    left: 80%;
-    transform: translate(-45%,-20%);
-    border-radius: 5px;
     border: 1px solid #FF8A3D;
-    padding: 0px;
-    color: #fafafa;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 50px;
     cursor: pointer;
-    margin: 10px;
 }
 
-#signup_btn {
-    background-color: #FF8A3D;
+/* 회원가입 */
+#signupForm {
+    display: none;
+    flex-direction: column;
+}
 
+
+#username,
+#usernum,
+#userdept,
+#useremail,
+#userid,
+#userpw {
     width: 332px;
     height: 52px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 17%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    border: 1px solid #FF8A3D;
-    padding: 10px 15px;
-    color: #fafafa;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 30px;
-    cursor: pointer;
-}
-
-#username {
-    width: 300px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    top: 16%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 5px;
     border: 1px solid #bbbbbb;
-    padding: 10px 15px;
     margin-bottom: 15px;
+    padding: 0px;
+}
+
+#usernum,
+#userdept{
+    width: 334px;
+    height: 54px;
+    padding-left: 10px;
+    cursor: pointer;
 }
 
 select { 
@@ -318,122 +213,39 @@ select::-ms-expand {
 #select_num {
     position: absolute;
     left: 85%;
-    top: 30%;
+    top: 32%;
     color: #bbbbbb;
-    cursor: pointer;
-}
-
-#usernum {
-    width: 332px;
-    height: 52px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    top: 16%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    border: 1px solid #bbbbbb;
-    padding: 17px 15px;
-    margin-bottom: 15px;
-    color: black;
-    font-size: 13px;
     cursor: pointer;
 }
 
 #select_dept {
     position: absolute;
     left: 85%;
-    top: 41%;
+    top: 43%;
     color: #bbbbbb;
     cursor: pointer;
 }
 
-#userdept {
-    width: 332px;
-    height: 52px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    top: 16%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    border: 1px solid #bbbbbb;
-    padding: 17px 15px;
-    margin-bottom: 15px;
-    color: black;
-    font-size: 13px;
-    cursor: pointer;
-}
-
-#useremail {
-    width: 300px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    top: 16%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    border: 1px solid #bbbbbb;
-    padding: 10px 15px;
-    margin-bottom: 25px;
-}
-
-#useremail::placeholder {
-    color: #bbbbbb;
-    font-size: 13px;
-}
-
-#userid {
-    width: 300px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    top: 16%;
-    left: 50%;
-    transform: translate(-50%, -70%);
-    border-radius: 5px;
-    border: 1px solid #bbbbbb;
-    padding: 10px 15px;
-    margin-bottom: 15px;
-
-}
-
-#userid::placeholder {
-    color: #bbbbbb;
-    font-size: 13px;
-}
-
-#userpw {
-    width: 300px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    top: 16%;
-    left: 50%;
-    transform: translate(-50%, -70%);
-    border-radius: 5px;
-    border: 1px solid #bbbbbb;
-    padding: 10px 15px;
-    margin-bottom: 20px;
-}
-
+#useremail::placeholder,
+#userid::placeholder,
 #userpw::placeholder {
     color: #bbbbbb;
     font-size: 13px;
+    padding-left: 10px;
+
 }
 
-#signupForm {
-    display: none;
-    flex-direction: column;
+#signup_btn {
+    background-color: #FF8A3D;
+
+    width: 332px;
+    height: 52px;
+    border-radius: 5px;
+    border: 1px solid #FF8A3D;
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    cursor: pointer;
+    margin: 10px 0;
 }

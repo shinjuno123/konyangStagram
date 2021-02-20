@@ -15,7 +15,7 @@
         <header id="header">
             <section class="inner">
                 <h1 class="logo">
-                    <a href="signup.html">
+                    <a href="{% url 'loginSigninApp:signup' %}">
                         <div class="logo_text">Together</div>
                     </a>
                     <div class="explain_text">본인인증</div>
@@ -30,11 +30,11 @@
             <input type="submit" value="본인 인증하기" id="certification" >
             <div id="cf_box">
                 <input type="text" placeholder="인증번호를 입력하세요." id="cf_num">
-                <div class="timer">3:00</div>
-                <a id="cf_btn">인증</a>
+                <input type="submit" value="인증" id="cf_btn">
             </div>
-            <div id="next">다음</div>
         </form>
+        <div class="timer">3:00</div>
+        <div id="next">다음</div>
 
         <!-- 회원가입 폼 -->
         <form class="input_box" id="signupForm">

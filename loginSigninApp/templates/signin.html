@@ -19,7 +19,7 @@
         <header id="header">
             <section class="inner">
                 <h1 class="logo">
-                    <a href="signin.html">
+                    <a href="{% url 'loginSigninApp:login' %}">
                         <div class="logo_text">Together</div>
                     </a>
                     <div class="explain_text">함께하는 즐거움을 느껴봐요!</div>
@@ -28,7 +28,7 @@
         </header>
 
         <div class="details" id="input_box">
-            <div class="input_box" id="input_box">
+            <div class="input_box" >
                 <div class="input_box_detail">
                     <form>
                         <input type="text" placeholder="아이디를 입력하세요." id="userid" name="user_id">

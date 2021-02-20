@@ -5,6 +5,7 @@ function signupFunc() {
     document.querySelector('.explain_text').innerHTML = '회원가입';
     document.getElementById('cfForm').style.display = "none";
     document.getElementById('signupForm').style.display = "flex";
+    document.getElementById('next_on').style.display = "none";
 }
 
 
@@ -13,8 +14,10 @@ certification.addEventListener('click',function(event){
     event.preventDefault();
     document.getElementById('certification').style.display = "none";
     document.getElementById('cf_box').style.display = "flex";
+    document.querySelector('.timer').style.display = "flex";
 
     document.getElementById('cf_btn').addEventListener('click',function(){
+        document.querySelector('.timer').style.display = "none";
         document.getElementById('cf_box').setAttribute('id','cf_success');
         document.getElementById('cf_success').innerHTML = '인증완료';
         document.getElementById('next').setAttribute('id','next_on');
@@ -31,4 +34,4 @@ function signinHTML(){
     
 }
 
-document.getElementsById('signup_btn').addEventListener('click',signinHTML);
+//document.getElementsById('signup_btn').addEventListener('click',signinHTML);
