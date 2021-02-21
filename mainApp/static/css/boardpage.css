@@ -1,3 +1,8 @@
+body{
+    height: auto;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
 /* 로고 옆 게시판 추가 */
 .header-left {
     display: flex;
@@ -20,44 +25,48 @@
 
 /* 전체 게시판 */
 .centerChart {
-    padding: 20px 30px;
+    padding: 0 30px 20px 30px;
     /* margin: 0 0 30px 200px; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
 }
 
 .postList{
-    margin-bottom: 20px;
+    padding: 0 10px 20px 10px;
+    width: 800px;
+    max-width: 800px;
+    border-bottom: 1px dashed #bbbbbb;
 }
 
-.board-title{
+.postList .board-title{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.board-click{
+.postList .board-click{
     margin: 15px 5px;
     cursor: pointer;
 }
 
 
-.postTitle{
+.postList .postTitle{
     font-weight: bold;
 }
 
-.postExplain{
+.postList .postExplain{
     font-size: 13px;
 }
 
-.postCount{
+.postList .postCount{
     font-size: 13px;
     margin-right: 10px;
     color: #ff8a3d;
 }
 /* 횡슬라이드 */
-.postChart {
+.postList .postChart {
     background-color: white;
     border: 1px solid rgba(0,0,0,0.09);
     max-width: 800px;
@@ -67,52 +76,217 @@
     width: auto;
 	overflow-x: auto;
 	overflow-y: hidden;
-    cursor: pointer;
+    border-radius: 10px;
 }
 
 
-.postChart:hover::-webkit-scrollbar-thumb {
-	background-color: gray;
+.postList .postChart:hover::-webkit-scrollbar-thumb {
+	background-color: #bbbbbb;
 }
 
-.postChart::-webkit-scrollbar {
+.postList .postChart::-webkit-scrollbar {
     height: 8px;
   }
-  .postChart::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  .postChart::-webkit-scrollbar-thumb {
-    border-radius: 3px;
-    background-color: transparent;
-  }
-  .postChart::-webkit-scrollbar-button {
-    width: 5px;
-  }
+.postList .postChart::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.postList .postChart::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: transparent;
+}
+.postList .postChart::-webkit-scrollbar-button {
+  width: 5px;
+}
 
-.post-click{
+.postList .post-click{
     text-align: center;
     margin-right: 20px;
     cursor: pointer;
 }
-.post1{
-    width: 256px;
-    height: 256px;
+.postList .post1{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
 }
 
+/* 새 게시판 만들기 */
+.newBoard{
+    background-color: #ff8a3d;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #ff8a3d;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 160px;
+    margin-left: 485px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
 
-/* 문의사항 */
+.newBoard:hover{
+    background-color: white;
+    color: #ff8a3d;
+    transition: all 0.3s ease;
+}
+
+/* 새 게시판 모달 창 만들기 */
+#modal {
+    display: none;
+    position:relative;
+    width:100%;
+    z-index:1;
+  }
+  
+  #modal h2 {
+    margin:0;   
+  }
+  
+  #modal .newBoard-modal {
+    width:400px;
+    margin:100px auto;
+    padding:30px;
+    background:#fff;
+    border:2px solid #666;
+    position: relative;
+    left: 70px;
+    bottom: 500px;
+  }
+
+  #newBoard-title{
+    margin: 20px 0 5px 0;
+    padding: 5px;
+    width: 334px;
+  }
+
+  #newBoard-explain{
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 334px;
+  }
+
+  #newBoard-title:focus,
+  #newBoard-explain:focus{
+      border: 0px;
+      outline: 1.5px solid #ff8a3d;
+  }
+
+  
+  #modal .modal_layer {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.5);
+    z-index:-1;
+  }   
+
+#modal .newBoard-modal .button-modal{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}    
+
+#add_btn,
+#modal_close_btn{
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #ff8a3d;
+    color: white;
+    border: 2px solid #ff8a3d;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+#add_btn{
+    margin-left: auto;
+}
+
+#add_btn:hover,
+#modal_close_btn:hover{
+    background-color: white;
+    color: #ff8a3d;
+    transition: all 0.3s ease;
+}
+
+/* 문의사항 게시판 */
+.QAChart{
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 20px;
+    margin-left: 65px;
+}
+
+.QAChart .postChart{
+    display: flex;
+    flex-direction: column;
+}
+
+.QAChart .board{
+    color: #ff8a3d;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 3px solid #ff8a3d;
+    display: flex;
+    justify-content: space-between;
+    width: 745px;
+    padding: 10px;
+}
+
+.QAChart .postChart>li,
+.QAChart .postChart>li>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.QAChart .postChart>li{
+    border-bottom: 1px solid #bbbbbb;
+    padding: 15px;
+}
+
+.QAChart .postChart .postTitle{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.QAChart .postChart>li>div>p{
+    font-size: 10px;
+    color: #ff8a3d;
+    margin-left: 10px;
+    line-height: 18px;
+}
+
+.postCount{
+    font-size: 10px;
+    color: #bbbbbb;
+    line-height: 20px;
+
+}
+
+#Q-icon{
+    cursor: pointer;
+}
+
+/* 문의사항 작성*/
 .writePost { 
     margin: 0 0 30px 200px;
     flex-direction: column;  
     background-color: white;
     border-radius: 20px;
-    padding: 20px;  
-    max-width: 880px;
+    padding: 30px;  
+    max-width: 800px;
     height: auto;
 }
 
 #Q-postform{
-    padding: 0 0 10px 10px;
+    padding: 10px;
     color: #ff8a3d;
     font-size: 25px;
     border-bottom: 3px solid #ff8a3d;
@@ -157,10 +331,17 @@
     font-size: 20px;
     width: 70px;
     height: 45px;
-    border: 0px;
+    border: 2px solid #ff8a3d;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+#write:hover{
+    background-color: white;
+    color: #ff8a3d;
+    transition: all 0.3s ease;
 }
 
 .centerChart:nth-child(3) .board-click {
@@ -186,4 +367,17 @@
 /* 게시판 안의 게시물들 */
 #posts{
     display: none;
+}
+
+@media screen and (max-width:1200px){
+    .postList{
+        width: 120%;
+    }
+}
+
+@media screen and (max-width:1400px){
+    .writePost{
+        width: 90%;
+        margin-left: auto;
+    }
 }

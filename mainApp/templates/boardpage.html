@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../static/css/normalize.css">
     <link rel="stylesheet" href="../static/css/boardpage.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
     <script
       src="https://kit.fontawesome.com/bc1f5db172.js"
       crossorigin="anonymous"
@@ -52,7 +54,7 @@
                         <p class="postTitle">Sad Post</p>
                         <p class="postExplain">슬픈 이야기를 공유하는 공간입니다.</p>
                     </div>
-                    <p class="postCount">게시물 1,234</p>
+                    <p class="postCount">posts 1,234</p>
                 </div>
                 <ul class="postChart" id="scroll">
                     <li>
@@ -118,7 +120,7 @@
                         <p class="postTitle">Happy Post</p>
                         <p class="postExplain">행복한 이야기를 공유하는 공간입니다.</p>
                     </div>
-                    <p class="postCount">게시물 3,321</p>
+                    <p class="postCount">posts 3,321</p>
                 </div>
                 <ul class="postChart">
                     <li>
@@ -184,7 +186,7 @@
                         <p class="postTitle">Tip Post</p>
                         <p class="postExplain">모든 꿀팁을 공유하는 공간입니다.</p>
                     </div>
-                    <p class="postCount">게시물 4,321</p>
+                    <p class="postCount">posts 4,321</p>
                 </div>
                 <ul class="postChart">
                     <li>
@@ -250,7 +252,7 @@
                         <p class="postTitle">Project Post</p>
                         <p class="postExplain">함께 프로젝트를 진행하는 공간입니다.</p>
                     </div>
-                    <p class="postCount">게시물 321</p>
+                    <p class="postCount">posts 321</p>
                 </div>
                 <ul class="postChart">
                     <li>
@@ -309,6 +311,71 @@
                 </ul>
             </div>
         </ul>
+        <div class="newBoard">새 게시판 만들기</div>
+        <div id="modal">
+            <form class="newBoard-modal">
+                <h2>새 게시판 생성</h2>
+                <input type="text" placeholder="게시판 제목" id="newBoard-title">
+                <input type="text" placeholder="한 줄 설명을 적어주세요." id="newBoard-explain">
+                <div class="button-modal">
+                    <input type="button" value="생성" id="add_btn">
+                    <button type="button" id="modal_close_btn">취소</button>
+                </div>
+            </form>
+            <div class="modal_layer"></div>
+        </div>
+
+        <!-- 문의사항 게시판 -->
+        <ul class="centerChart">
+            <div class="QAChart">
+                <div class="board">
+                    <p class="board-txt">문의사항 게시판</p>
+                    <i class="fas fa-edit" id="Q-icon"></i>
+                </div>
+                <ul class="postChart">
+                    <li>
+                        <div>
+                            <i class="fas fa-unlock"></i>
+                            <div class="board-click">
+                                <p class="postTitle">질문 있습니다~!</p>
+                            </div>
+                            <p>new</p>
+                        </div>
+                        <p class="postCount">답변 2</p>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="fas fa-lock"></i>
+                            <div class="board-click">
+                                <p class="postTitle">문의사항 있습니다~!</p>
+                            </div>
+                            <p>new</p>
+                        </div>
+                        <p class="postCount">답변 1</p>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="fas fa-unlock"></i>
+                            <div class="board-click">
+                                <p class="postTitle">심심해요!</p>
+                            </div>
+                            <p></p>
+                        </div>
+                        <p class="postCount">답변 0</p>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="fas fa-lock"></i>
+                            <div class="board-click">
+                                <p class="postTitle">불편해요!</p>
+                            </div>
+                            <p></p>
+                        </div>
+                        <p class="postCount">답변 1</p>
+                    </li>
+                </ul>
+            </div>
+        </ul>
 
         <!-- 문의사항 작성 -->
         <div class="writePost">
@@ -332,60 +399,6 @@
                 </div>
             </form>
         </div>
-
-        
-
-        <!-- 문의사항 게시판 -->
-        <!-- <ul class="centerChart">
-            <div class="postList">
-                <div class="board">
-                    <p class="board-txt">문의사항 게시판</p>
-                    <i id="Q-icon" class="fas fa-question"></i>
-                </div>
-            </div>
-            <ul class="postChart">
-                <li>
-                    <div>
-                        <i class="fas fa-unlock"></i>
-                        <div class="board-click">
-                            <p class="postTitle">질문 있습니다~!</p>
-                        </div>
-                        <p>new</p>
-                    </div>
-                    <p class="postCount">답변 2</p>
-                </li>
-                <li>
-                    <div>
-                        <i class="fas fa-lock"></i>
-                        <div class="board-click">
-                            <p class="postTitle">문의사항 있습니다~!</p>
-                        </div>
-                        <p>new</p>
-                    </div>
-                    <p class="postCount">답변 1</p>
-                </li>
-                <li>
-                    <div>
-                        <i class="fas fa-unlock"></i>
-                        <div class="board-click">
-                            <p class="postTitle">심심해요!</p>
-                        </div>
-                        <p></p>
-                    </div>
-                    <p class="postCount">답변 0</p>
-                </li>
-                <li>
-                    <div>
-                        <i class="fas fa-lock"></i>
-                        <div class="board-click">
-                            <p class="postTitle">불편해요!</p>
-                        </div>
-                        <p></p>
-                    </div>
-                    <p class="postCount">답변 1</p>
-                </li>
-            </ul>
-        </ul> -->
 
 
         <!-- 게시판 안의 게시물들 -->
