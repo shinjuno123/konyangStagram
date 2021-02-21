@@ -23,7 +23,7 @@ function QAFunc() {
     document.querySelector('.postList').style.display = "none";
     document.querySelector('.writePost').style.display = "flex";
     centerChartAll[1].style.display = "none";
-    centerChartAll[2].style.display = "none";
+    //centerChartAll[2].style.display = "none";
     document.getElementById('logo-board-icon').style.display="flex";
     document.getElementById('logo-board').innerHTML = document.getElementById('q2').innerHTML;
 }
@@ -37,5 +37,5 @@ function boardFunc() {
 //Event Listener
 boardClick.addEventListener('click',boardFunc);
 QAClick.addEventListener('click',QAFunc);
-QAIcon.addEventListener('click', QAFunc);
+//QAIcon.addEventListener('click', QAFunc);
 postClick.addEventListener('click',postclickFunc);

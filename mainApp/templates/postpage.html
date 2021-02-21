@@ -17,7 +17,7 @@
 <body>
     <header>
         <div class="header-left">
-            <a href="mainpage.html"><img src="" alt="">로고</a>
+            <a href="{%url ''%}"><img src="" alt="">로고</a>
             <i class="fas fa-chevron-right"></i>
             <a href="postpage.html">전체 게시판</a>
             <i class="fas fa-chevron-right" id="logo-board-icon"></i>
@@ -97,23 +97,25 @@
 
             <!-- 문의사항 작성 -->
             <div class="writePost">
-                <p class="postform" id="Q-postform">문의사항</p>
-                <div class="title">
-                    <p class="title-txt">제목</p>
-                    <input type="text" id="titleId" placeholder="* 제목을 입력해 주세요.">
-                </div>
-                <div class="content">
-                    <p class="content-txt">내용</p>
-                    <textarea name="contentName" id="contentId" cols="30" rows="10" placeholder="* 내용을 입력해 주세요."></textarea>
-                </div>
-                <div class="password">
-                    <p class="password-txt">암호</p>
-                    <input type="text" id="passwordId" placeholder="비공개를 원하시면 암호를 입력해 주세요.">
-                </div>
-                <div>
-                    <div id="essential">*는 필수 입력 사항</div>
-                    <input id="write" type="button" value="작성">
-                </div>
+                <p id="Q-postform">문의사항</p>
+                <form class="postform">
+                    <div class="title">
+                        <p class="title-txt">제목</p>
+                        <input type="text" id="titleId" placeholder="* 제목을 입력해 주세요.">
+                    </div>
+                    <div class="content">
+                        <p class="content-txt">내용</p>
+                        <textarea name="contentName" id="contentId" cols="30" rows="10" placeholder="* 내용을 입력해 주세요."></textarea>
+                    </div>
+                    <div class="password">
+                        <p class="password-txt">암호</p>
+                        <input type="text" id="passwordId" placeholder="비공개를 원하시면 암호를 입력해 주세요.">
+                    </div>
+                    <div>
+                        <div id="essential">*는 필수 입력 사항</div>
+                        <input id="write" type="button" value="작성">
+                    </div>
+                </form>
             </div>
         </ul>
 
@@ -229,7 +231,7 @@
                     <span>joker</span>
                     <i class="fas fa-ellipsis-h"></i>
                 </div>
-                <img class="post1" src="../static/images/joker.jpg">
+                <img class="post1" src="../static/images/marilyn.jpg">
                 <div class="postBottom">
                     <span>더보기</span>
                     <div class="postIcon">
@@ -243,7 +245,7 @@
                     <span>haha ha moo</span>
                     <i class="fas fa-ellipsis-h"></i>
                 </div>
-                <img class="post1" src="../static/images/hahaha.jpg">
+                <img class="post1" src="../static/images/moo.jpg">
                 <div class="postBottom">
                     <span>더보기</span>
                     <div class="postIcon">
@@ -257,7 +259,7 @@
                     <span>Dick Hunter Yorkmang</span>
                     <i class="fas fa-ellipsis-h"></i>
                 </div>
-                <img class="post1" src="../static/images/dickH.jpg">
+                <img class="post1" src="../static/images/samsek.jpg">
                 <div class="postBottom">
                     <span>더보기 </span>
                     <div class="postIcon">
