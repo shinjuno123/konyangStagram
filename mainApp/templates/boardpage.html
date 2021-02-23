@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/boardpage.css' %}"> -->
     <link rel="stylesheet" href="../static/css/mainpage.css">
-    <link rel="stylesheet" href="../static/css/normalize.css">
+    <link rel="stylesheet" href="../static/css/mainpage.css">
     <link rel="stylesheet" href="../static/css/boardpage.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -54,7 +57,10 @@
                         <p class="postTitle">Sad Post</p>
                         <p class="postExplain">슬픈 이야기를 공유하는 공간입니다.</p>
                     </div>
-                    <p class="postCount">posts 1,234</p>
+                    <div class="postMenu">
+                        <p class="postCount">posts 1,234</p>
+                        <i class="fas fa-ellipsis-h" id="editboardIcon"></i>
+                    </div>
                 </div>
                 <ul class="postChart" id="scroll">
                     <li>
@@ -111,6 +117,10 @@
                         </div>
                     </li>
                 </ul>
+                <div class="editBoard">
+                    <p class="addPost">게시물 추가</p>
+                    <p class="deleteBoard">게시판 삭제</p>
+                </div>
             </div>
 
             <!-- Happy 게시판 -->
@@ -120,7 +130,10 @@
                         <p class="postTitle">Happy Post</p>
                         <p class="postExplain">행복한 이야기를 공유하는 공간입니다.</p>
                     </div>
-                    <p class="postCount">posts 3,321</p>
+                    <div class="postMenu">
+                        <p class="postCount">posts 3,321</p>
+                        <i class="fas fa-ellipsis-h" id="editboardIcon"></i>
+                    </div>
                 </div>
                 <ul class="postChart">
                     <li>
@@ -177,6 +190,10 @@
                         </div>
                     </li>
                 </ul>
+                <div class="editBoard">
+                    <p class="addPost">게시물 추가</p>
+                    <p class="deleteBoard">게시판 삭제</p>
+                </div>
             </div>
 
              <!-- Tip 게시판 -->
@@ -186,7 +203,10 @@
                         <p class="postTitle">Tip Post</p>
                         <p class="postExplain">모든 꿀팁을 공유하는 공간입니다.</p>
                     </div>
-                    <p class="postCount">posts 4,321</p>
+                    <div class="postMenu">
+                        <p class="postCount">posts 4,321</p>
+                        <i class="fas fa-ellipsis-h" id="editboardIcon"></i>
+                    </div>
                 </div>
                 <ul class="postChart">
                     <li>
@@ -243,6 +263,10 @@
                         </div>
                     </li>
                 </ul>
+                <div class="editBoard">
+                    <p class="addPost">게시물 추가</p>
+                    <p class="deleteBoard">게시판 삭제</p>
+                </div>
             </div>
 
              <!-- Project 게시판 -->
@@ -252,7 +276,10 @@
                         <p class="postTitle">Project Post</p>
                         <p class="postExplain">함께 프로젝트를 진행하는 공간입니다.</p>
                     </div>
-                    <p class="postCount">posts 321</p>
+                    <div class="postMenu">
+                        <p class="postCount">posts 321</p>
+                        <i class="fas fa-ellipsis-h" id="editboardIcon"></i>
+                    </div>
                 </div>
                 <ul class="postChart">
                     <li>
@@ -309,18 +336,22 @@
                         </div>
                     </li>
                 </ul>
+                <div class="editBoard">
+                    <p class="addPost">게시물 추가</p>
+                    <p class="deleteBoard">게시판 삭제</p>
+                </div>
             </div>
         </ul>
         <div class="newBoard">새 게시판 만들기</div>
         <div id="modal">
             <form class="newBoard-modal">
-                <h2>새 게시판 생성</h2>
+                <div>
+                    <h2>새 게시판 생성</h2>
+                    <p id="modal_close_btn">X</p>
+                </div>
                 <input type="text" placeholder="게시판 제목" id="newBoard-title">
                 <input type="text" placeholder="한 줄 설명을 적어주세요." id="newBoard-explain">
-                <div class="button-modal">
-                    <input type="button" value="생성" id="add_btn">
-                    <button type="button" id="modal_close_btn">취소</button>
-                </div>
+                <input type="button" value="생성" id="add_btn">
             </form>
             <div class="modal_layer"></div>
         </div>
@@ -497,6 +528,8 @@
         </div>
     </div>
 
+    <!-- <script src="{% static 'js/mainpage.js' %}"></script>
+    <script src="{% static 'js/boardpage.js' %}"></script> -->
     <script src="../static/js/mainpage.js"></script>
     <script src="../static/js/boardpage.js"></script>
 </body>
