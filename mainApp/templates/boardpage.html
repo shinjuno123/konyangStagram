@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-    <link rel="stylesheet" href="{% static 'css/boardpage.css' %}"> -->
-    <link rel="stylesheet" href="../static/css/mainpage.css">
-    <link rel="stylesheet" href="../static/css/mainpage.css">
-    <link rel="stylesheet" href="../static/css/boardpage.css">
+    <link rel="stylesheet" href="{% static 'css/boardpage.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
@@ -22,9 +19,9 @@
 <body>
     <header>
         <div class="header-left">
-            <a href="{%url ''%}"><img src="" alt="">로고</a>
+            <a href="{% url '' %}"><img src="" alt="">로고</a>
             <i class="fas fa-chevron-right"></i>
-            <a href="boardpage.html">전체 게시판</a>
+            <a href="{% url '' %}">전체 게시판</a>
             <i class="fas fa-chevron-right" id="logo-board-icon"></i>
             <a href="" id="logo-board"></a>
         </div>
@@ -66,7 +63,7 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/yatong.jpg">
+                                <img class="post1" src="{% static 'images/yatong.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -83,7 +80,6 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <!-- <img class="post1" src="../static/images/moo.jpg"> -->
                                 <p class="postContent">건냥이 보고가세요~!</p>
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
@@ -101,7 +97,7 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/samsek.jpg">
+                                <img class="post1" src="{% static 'images/samsek.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -118,7 +114,7 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -134,7 +130,7 @@
                     </li><li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -150,7 +146,7 @@
                     </li><li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -166,7 +162,7 @@
                     </li><li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -203,7 +199,7 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/yatong.jpg">
+                                <img class="post1" src="{% static 'images/yatong.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -220,7 +216,7 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -237,7 +233,7 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/samsek.jpg">
+                                <img class="post1" src="{% static 'images/samsek.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -254,7 +250,7 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -270,7 +266,7 @@
                     </li><li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -286,7 +282,7 @@
                     </li><li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -302,7 +298,7 @@
                     </li><li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -339,7 +335,7 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/yatong.jpg">
+                                <img class="post1" src="{% static 'images/yatong.jpg' %}>
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -356,7 +352,7 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -373,7 +369,7 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/samsek.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -390,7 +386,7 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -406,7 +402,7 @@
                     </li><li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -422,7 +418,7 @@
                     </li><li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -438,7 +434,7 @@
                     </li><li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -475,7 +471,7 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/yatong.jpg">
+                                <img class="post1" src="{% static 'images/yatong.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -492,7 +488,7 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -509,7 +505,7 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/samsek.jpg">
+                                <img class="post1" src="{% static 'images/samsek.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -526,7 +522,7 @@
                     <li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -542,7 +538,7 @@
                     </li><li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -558,7 +554,7 @@
                     </li><li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -574,7 +570,7 @@
                     </li><li>
                         <div>
                             <div class="post-click">
-                                <img class="post1" src="../static/images/moo.jpg">
+                                <img class="post1" src="{% static 'images/moo.jpg' %}">
                                 <p class="postExplain">우리집 건냥이</p>
                                 <div class="postHover">
                                     <div class="post-top">
@@ -697,7 +693,7 @@
                     <span>joker</span>
                     <i class="fas fa-ellipsis-h"></i>
                 </div>
-                <img class="post1" src="../static/images/marilyn.jpg">
+                <img class="post1" src="{% static 'images/marilyn.jpg' %}">
                 <div class="postBottom">
                     <span>더보기</span>
                     <div class="postIcon">
@@ -711,7 +707,7 @@
                     <span>haha ha moo</span>
                     <i class="fas fa-ellipsis-h"></i>
                 </div>
-                <img class="post1" src="../static/images/moo.jpg">
+                <img class="post1" src="{% static 'images/moo.jpg' %}">
                 <div class="postBottom">
                     <span>더보기</span>
                     <div class="postIcon">
@@ -725,7 +721,7 @@
                     <span>Dick Hunter Yorkmang</span>
                     <i class="fas fa-ellipsis-h"></i>
                 </div>
-                <img class="post1" src="../static/images/samsek.jpg">
+                <img class="post1" src="{% static 'images/samsek.jpg' %}">
                 <div class="postBottom">
                     <span>더보기 </span>
                     <div class="postIcon">
@@ -786,9 +782,7 @@
         </div>
     </div>
 
-    <!-- <script src="{% static 'js/mainpage.js' %}"></script>
-    <script src="{% static 'js/boardpage.js' %}"></script> -->
-    <script src="../static/js/mainpage.js"></script>
-    <script src="../static/js/boardpage.js"></script>
+    <script src="{% static 'js/mainpage.js' %}"></script>
+    <script src="{% static 'js/boardpage.js' %}"></script>
 </body>
 </html>
