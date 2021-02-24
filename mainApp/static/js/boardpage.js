@@ -3,7 +3,7 @@ const postClicks = document.querySelectorAll('.board-click');
 let postLists = document.querySelectorAll('.postList');
 const postCounts = document.querySelectorAll('.postCount');
 const QAClick = document.querySelector('.question');
-const QAIcon = document.getElementById('Q-icon');
+const QAIcon = document.querySelector('.Q-write');
 const centerChart = document.querySelector('.centerChart');
 const newBoard = document.querySelector('.newBoard');
 const QAChart = document.querySelector('.QAChart');
@@ -12,8 +12,21 @@ const logoBoard = document.getElementById('logo-board');
 const posts = document.getElementById('posts');
 const addNewBoard = document.getElementById('add_btn');
 let editBoards = document.querySelectorAll('.postMenu>i');
+const postImgs = document.querySelectorAll('.post1');
+const postContents = document.querySelectorAll('.postContent');
 
 //function
+//postHover
+for(let postImg of postImgs){
+    postImg.addEventListener('mouseover', function(){
+        let hover = postImg.parentElement;
+        hover.querySelector('.postHover').style.display = "flex";
+        hover.querySelector('.postHover').addEventListener('mouseout', function(){
+            hover.querySelector('.postHover').style.display = "none";
+        });
+    });
+}
+
 //게시판 메뉴
 function editBoardFunc(e){
     let elem = e.target.parentElement.parentElement.parentElement;
@@ -125,8 +138,8 @@ for(let postClick of postClicks){
 
 //문의사항 게시판
 function QAboardFunc(){
-    for(let postList of postLists){
-        postList.style.display = "none";
+    if(!centerChart.querySelector('.QAChart')){
+        centerChart.style.display = "none";
     }
     QAChart.style.display = "flex";
     document.querySelector('.writePost').style.display = "none";
@@ -156,6 +169,8 @@ addNewBoard.addEventListener('click',addNewBoardFunc);//새 게시판 생성
 for(let editBoard of editBoards){
     editBoard.addEventListener('click',editBoardFunc);//게시판 메뉴
 }
+
+
 
 
 //마우스 드래그로 좌우 스크롤

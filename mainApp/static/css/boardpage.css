@@ -79,7 +79,9 @@ body{
 	overflow-x: auto;
 	overflow-y: hidden;
     border-radius: 10px;
+    height: 262px;
 }
+
 
 
 .postList .postChart:hover::-webkit-scrollbar-thumb {
@@ -101,15 +103,56 @@ body{
 }
 
 .postList .post-click{
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin-right: 20px;
     cursor: pointer;
 }
-.postList .post1{
+
+.postList .post-click>img,
+.postList .post-click>p:nth-child(1){
     width: 200px;
     height: 200px;
     border-radius: 10px;
+    margin-bottom: 5px;
 }
+
+.postList .post-click>p:nth-child(1){
+    padding: 20px;
+    border: 1px solid #bbbbbb;
+}
+
+/* postHover */
+.post-click .postHover{
+    display: none;
+    flex-direction: column;
+    transition: all 0.2s ease;
+    position: relative;
+    bottom: 220px;
+    height: 200px;
+    
+}
+
+.post-click .postHover .post-top,
+.post-click .postHover .post-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 8px;
+    background-color: rgba(256, 256, 256, 0.5);
+}
+
+.post-click .postHover .post-top{
+    margin-bottom: auto;
+}
+
+.post-click i,
+.post-click .postComment{
+    font-size: 12px;
+    font-weight:normal;
+}
+
 
 /* 게시판 메뉴(게시물 추가, 게시판 삭제) */
 .postList .postMenu{
@@ -124,17 +167,18 @@ body{
     border: 2px solid #fafafa;
 }
 
-
-
 .postList .editBoard{
     display: none;
     position: relative;
     bottom: 260px;
     justify-content: space-evenly;
     width: 780px;
+    height: 260px;
     font-size: 20px;
     font-weight: bold;
-    padding: 100px 0px 130px 0px;
+    padding: 100px 0px 135px 5px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
 }
 
 .postList .editBoard>p{
@@ -149,6 +193,7 @@ body{
     border: 2px solid #ff8a3d;
     border-radius: 50px;
     transition: all 0.2s ease;
+    height: 48px;
 
 }
 
@@ -287,44 +332,68 @@ body{
     margin-left: 65px;
 }
 
-.QAChart .postChart{
-    display: flex;
-    flex-direction: column;
-}
-
 .QAChart .board{
     font-size: 20px;
-    font-weight: bold;
-    border-bottom: 2px solid #ff8a3d;
+    border-bottom: 3px solid #bbbbbb;
     display: flex;
     justify-content: space-between;
     width: 745px;
-    padding: 10px;
+    padding: 10px 10px 15px 10px;
+    margin-bottom: 2px;
+}
+
+.QAChart .postChart{
+    display: flex;
+    flex-direction: column;
+    list-style-type:initial;
+    border-top: 1px solid #bbbbbb;
 }
 
 .QAChart .postChart>li,
 .QAChart .postChart>li>div{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.QAChart .postChart>li>div>i{
+    display: none;
 }
 
 .QAChart .postChart>li{
     border-bottom: 1px solid #bbbbbb;
-    padding: 15px;
+    padding: 10px;
 }
 
 .QAChart .postChart .postTitle{
-    font-weight: bold;
     margin-left: 10px;
 }
 
-.QAChart .postChart>li>div>p{
+/* 게시물 번호 */
+.QAChart .postChart>li>div:nth-child(1)>p:nth-child(1){
+    font-size: 13px;
+    padding: 0 10px;
+}
+
+/* 게시물 제목 */
+.QAChart .postChart>li>div:nth-child(1)>p:nth-child(2){
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* new 표시 */
+.QAChart .postChart>li>div:nth-child(1)>p:nth-child(3){ 
     font-size: 10px;
     color: #ff8a3d;
     margin-left: 10px;
     line-height: 18px;
 }
 
+/* 게시물 작성일 */
+.QAChart .postChart>li>div:nth-child(2)>p:nth-child(1){
+    margin: 0px 20px;
+    font-size: 13px;
+}
 .postCount{
     font-size: 10px;
     color: #bbbbbb;
@@ -332,14 +401,24 @@ body{
 
 }
 
-#Q-icon{
+/* 문의사항 글쓰기 버튼 */
+.Q-write{
+    margin: 15px 0px 0px auto;
     transition: all 0.3s ease;
+    font-size: 13px;
+    padding: 5px 10px;
+    border: 1px solid #ff8a3d;
+    background-color: #ff8a3d;
+    color: white;
+    border-radius: 2px;
 }
 
-#Q-icon:hover{
+.Q-write:hover{
     cursor: pointer;
     color: #ff8a3d;
     transition: all 0.3s ease;
+    border: 1px solid #ff8a3d;
+    background-color: white;
 }
 
 /* 문의사항 작성*/
@@ -384,11 +463,19 @@ body{
     border-radius: 5px;
 }
 
+#titleId::placeholder,
+#contentId::placeholder,
+#passwordId::placeholder{
+    color: #bbbbbb;
+    font-size: 13px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
 #titleId:focus,
 #contentId:focus,
 #passwordId:focus{
     border: 0px;
-    outline: 2px solid #ff8a3d;
+    outline: 1.5px solid #ff8a3d;
 }
 
 #write {
