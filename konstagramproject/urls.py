@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainApp.views.mainpage, name='mainpage'),
     path('login/', include('loginSigninApp.urls')), # Appname
+    path('boardpage/', mainApp.views.boardpage, name='boardpage'),
 
 ]

@@ -316,6 +316,8 @@ body{
     display: flex;
     font-size: 13px;
     width: 750px;
+    height: 220px;
+    align-items: center;
     padding-bottom: 10px;
     justify-content: center;
 }
