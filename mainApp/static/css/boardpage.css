@@ -18,8 +18,8 @@ body{
     display: none;
 }
 
-.header-left>a:nth-child(5){
-    cursor: default;
+#logo-board{
+    cursor: pointer;
 }
 
 
@@ -107,7 +107,6 @@ body{
     flex-direction: column;
     text-align: center;
     margin-right: 20px;
-    cursor: pointer;
 }
 
 .postList .post-click>img,
@@ -119,9 +118,14 @@ body{
 }
 
 .postList .post-click>p:nth-child(1){
-    padding: 20px;
+    padding:  38px 10px;
     border: 1px solid #bbbbbb;
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
 }
+
+
 
 /* postHover */
 .post-click .postHover{
@@ -130,7 +134,8 @@ body{
     transition: all 0.2s ease;
     position: relative;
     bottom: 220px;
-    height: 200px;
+    height: 201px;
+    cursor: pointer;
     
 }
 
@@ -139,12 +144,17 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 8px;
+    padding: 8px;
     background-color: rgba(256, 256, 256, 0.5);
 }
 
 .post-click .postHover .post-top{
     margin-bottom: auto;
+    border-bottom:1px solid rgba(0, 0, 0, 0.09);
+}
+
+.post-click .postHover .post-bottom{
+    border-top: 1px solid rgba(0, 0, 0, 0.09);
 }
 
 .post-click i,
@@ -164,7 +174,9 @@ body{
     display: flex;
     color: #ff8a3d;
     cursor: pointer;
-    border: 2px solid #fafafa;
+}
+.postList .postMenu>i:hover{
+    color:gray;
 }
 
 .postList .editBoard{
@@ -177,7 +189,7 @@ body{
     font-size: 20px;
     font-weight: bold;
     padding: 100px 0px 135px 5px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.09);
     border-radius: 10px;
 }
 
@@ -324,7 +336,7 @@ body{
 
 /* 문의사항 게시판 */
 .QAChart{
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 20px;
     background-color: white;
@@ -513,7 +525,7 @@ body{
     font-size: 10px;
     color: #ff8a3d;
     width: 100px;
-    line-height: 45px;
+    line-height: 35px;
     margin: 10px 0 0 auto;
 }
 

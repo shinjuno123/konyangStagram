@@ -2,11 +2,9 @@
 const postClicks = document.querySelectorAll('.board-click');
 let postLists = document.querySelectorAll('.postList');
 const postCounts = document.querySelectorAll('.postCount');
-const QAClick = document.querySelector('.question');
-const QAIcon = document.querySelector('.Q-write');
+const QAClick = document.getElementById('q2');
 const centerChart = document.querySelector('.centerChart');
 const newBoard = document.querySelector('.newBoard');
-const QAChart = document.querySelector('.QAChart');
 const logoBoardIcon = document.getElementById('logo-board-icon');
 const logoBoard = document.getElementById('logo-board');
 const posts = document.getElementById('posts');
@@ -14,8 +12,18 @@ const addNewBoard = document.getElementById('add_btn');
 let editBoards = document.querySelectorAll('.postMenu>i');
 const postImgs = document.querySelectorAll('.post1');
 const postContents = document.querySelectorAll('.postContent');
+const clicks = document.querySelectorAll('.post-click');
+
 
 //function
+//postContent 이미지 없는 게시글
+function contentFunc(){
+    for(let postContent of postContents){
+        postContent.parentElement.querySelector('.postHover').style.display = "flex";
+    }
+}
+
+
 //postHover
 for(let postImg of postImgs){
     postImg.addEventListener('mouseover', function(){
@@ -127,7 +135,6 @@ for(let postClick of postClicks){
     for(let postList of postLists){
         postList.style.display = "none";
     }
-    QAChart.style.display = "none";
     newBoard.style.display = "none";
     logoBoardIcon.style.display="flex";
     logoBoard.innerHTML = postClick.querySelector('.postTitle').innerHTML;
@@ -136,39 +143,15 @@ for(let postClick of postClicks){
     });
 }
 
-//문의사항 게시판
-function QAboardFunc(){
-    if(!centerChart.querySelector('.QAChart')){
-        centerChart.style.display = "none";
-    }
-    QAChart.style.display = "flex";
-    document.querySelector('.writePost').style.display = "none";
-    newBoard.style.display = "none";
-    posts.style.display = 'none'
-    logoBoardIcon.style.display="flex";
-    logoBoard.innerHTML = document.getElementById('q2').innerHTML;
-}
 
-//문의사항 작성
-function QAFunc() {
-    for(let postList of postLists){
-        postList.style.display = "none";
-    }
-    centerChart.style.display = "none";
-    QAChart.style.display = "none";
-    document.querySelector('.writePost').style.display = "flex";
-    newBoard.style.display = "none";
-    logoBoardIcon.style.display="flex";
-}
 
 
 //Event Listener
-QAClick.addEventListener('click',QAboardFunc); //문의사항 게시판
-QAIcon.addEventListener('click', QAFunc);//문의사항 작성
 addNewBoard.addEventListener('click',addNewBoardFunc);//새 게시판 생성
 for(let editBoard of editBoards){
     editBoard.addEventListener('click',editBoardFunc);//게시판 메뉴
 }
+window.addEventListener('load', contentFunc());//텍스트게시글
 
 
 

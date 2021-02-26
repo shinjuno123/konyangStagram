@@ -6,3 +6,6 @@ def mainpage(request):
 
 def boardpage(request):
     return render(request,'boardpage.html')
+
+def questionpage(request):
+    return render(request,'question.html')

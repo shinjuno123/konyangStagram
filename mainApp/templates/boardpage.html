@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +24,7 @@
             <i class="fas fa-chevron-right"></i>
             <a href="{% url 'boardpage' %}">전체 게시판</a>
             <i class="fas fa-chevron-right" id="logo-board-icon"></i>
-            <a href="" id="logo-board"></a>
+            <p id="logo-board"></p>
         </div>
         <div class="header-right">
             <div class="realtimeSearch">
@@ -62,117 +62,107 @@
                 </div>
                 <ul class="postChart" id="scroll">
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/yatong.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/yatong.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <p class="postContent">건냥이 보고가세요~!</p>
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <p class="postContent">건냥이 보고가세요~!
+                                <br>너무 귀여워요😺😺</p>
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/samsek.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/samsek.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
-                    </li><li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                    </li>
+                    <li>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
-                    </li><li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                    </li>
+                    <li>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
-                    </li><li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                    </li>
+                    <li>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
@@ -198,117 +188,107 @@
                 </div>
                 <ul class="postChart">
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/yatong.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/yatong.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/samsek.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <p class="postContent">건냥이 보고가세요~!
+                                <br>너무 귀여워요😺😺</p>
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
-                    </li><li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                    </li>
+                    <li>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
-                    </li><li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                    </li>
+                    <li>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
-                    </li><li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                    </li>
+                    <li>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
@@ -334,117 +314,107 @@
                 </div>
                 <ul class="postChart">
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/yatong.jpg' %}>
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <p class="postContent">건냥이 보고가세요~!
+                                <br>너무 귀여워요😺😺</p>
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
-                    </li><li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                    </li>
+                    <li>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
-                    </li><li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                    </li>
+                    <li>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
-                    </li><li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                    </li>
+                    <li>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
@@ -470,117 +440,107 @@
                 </div>
                 <ul class="postChart">
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/yatong.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/yatong.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/samsek.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/samsek.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                        <div class="post-click">
+                            <p class="postContent">건냥이 보고가세요~!
+                                <br>너무 귀여워요😺😺</p>
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
-                    </li><li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                    </li>
+                    <li>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
-                    </li><li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                    </li>
+                    <li>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
-                    </li><li>
-                        <div>
-                            <div class="post-click">
-                                <img class="post1" src="{% static 'images/moo.jpg' %}">
-                                <p class="postExplain">우리집 건냥이</p>
-                                <div class="postHover">
-                                    <div class="post-top">
-                                        <p class="postComment">yatong</p>
-                                    </div>
-                                    <div class="post-bottom">
-                                        <i class="fas fa-heart"> 1,234</i>
-                                        <p class="postComment">댓글56</p>
-                                    </div>
+                    </li>
+                    <li>
+                        <div class="post-click">
+                            <img class="post1" src="{% static 'images/moo.jpg' %}">
+                            <p class="postExplain">우리집 건냥이</p>
+                            <div class="postHover">
+                                <div class="post-top">
+                                    <p class="postComment">yatong</p>
+                                </div>
+                                <div class="post-bottom">
+                                    <i class="fas fa-heart"> 1,234</i>
+                                    <p class="postComment">댓글56</p>
                                 </div>
                             </div>
                         </div>
@@ -606,85 +566,6 @@
             <div class="modal_layer"></div>
         </div>
 
-        <!-- 문의사항 게시판 -->
-        <ul class="centerChart">
-            <div class="QAChart">
-                <div class="board">
-                    <p class="board-txt">문의사항 게시판</p>
-                </div>
-                <ul class="postChart">
-                    <li>
-                        <div>
-                            <p>4</p>
-                            <p class="postTitle">질문 있습니다~!</p>
-                            <p>new</p>
-                        </div>
-                        <div>
-                            <p class="writeTime">2021.02.24</p>
-                            <p class="postCount">답변 2</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p>3</p>
-                            <p class="postTitle">문의사항 있습니다~!</p>
-                            <p>new</p>
-                        </div>
-                        <div>
-                            <p class="writeTime">2021.02.23</p>
-                            <p class="postCount">답변 1</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p>2</p>
-                            <p class="postTitle">심심해요!</p>
-                            <p></p>
-                        </div>
-                        <div>
-                            <p class="writeTime">2021.02.22</p>
-                            <p class="postCount">답변 0</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p>1</p>
-                            <p class="postTitle">불편해요!</p>
-                            <p></p>
-                        </div>
-                        <div>
-                            <p class="writeTime">2021.02.21</p>
-                            <p class="postCount">답변 1</p>                            
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="Q-write">글쓰기</div>
-            </div>
-        </ul>
-
-        <!-- 문의사항 작성 -->
-        <div class="writePost">
-            <p id="Q-postform">문의사항</p>
-            <form class="postform">
-                <div class="title">
-                    <p class="title-txt">제목</p>
-                    <input type="text" id="titleId" placeholder="*제목을 입력해 주세요.">
-                </div>
-                <div class="content">
-                    <p class="content-txt">내용</p>
-                    <textarea name="contentName" id="contentId" cols="30" rows="10" placeholder="*내용을 입력해 주세요."></textarea>
-                </div>
-                <div class="password">
-                    <p class="password-txt">암호</p>
-                    <input type="text" id="passwordId" placeholder="비공개를 원하시면 암호를 입력해 주세요.">
-                </div>
-                <div>
-                    <div id="essential">*는 필수 입력 사항</div>
-                    <input id="write" type="button" value="작성">
-                </div>
-            </form>
-        </div>
 
 
         <!-- 게시판 안의 게시물들 -->
@@ -694,7 +575,7 @@
                     <span>joker</span>
                     <i class="fas fa-ellipsis-h"></i>
                 </div>
-                <img class="post1" src="{% static 'images/marilyn.jpg' %}">
+                <img class="postImg" src="{% static 'images/marilyn.jpg' %}">
                 <div class="postBottom">
                     <span>더보기</span>
                     <div class="postIcon">
@@ -708,7 +589,7 @@
                     <span>haha ha moo</span>
                     <i class="fas fa-ellipsis-h"></i>
                 </div>
-                <img class="post1" src="{% static 'images/moo.jpg' %}">
+                <img class="postImg" src="{% static 'images/moo.jpg' %}">
                 <div class="postBottom">
                     <span>더보기</span>
                     <div class="postIcon">
@@ -722,7 +603,7 @@
                     <span>Dick Hunter Yorkmang</span>
                     <i class="fas fa-ellipsis-h"></i>
                 </div>
-                <img class="post1" src="{% static 'images/samsek.jpg' %}">
+                <img class="postImg" src="{% static 'images/samsek.jpg' %}">
                 <div class="postBottom">
                     <span>더보기 </span>
                     <div class="postIcon">
@@ -761,7 +642,7 @@
 
             <ul class="question">
                 <span><i class="fas fa-question-circle"></i>질의응답</span>
-                <li id="q2">불편사항</li>
+                <a href="{% url 'questionpage' %}" id="q2">문의사항</li>
             </ul>
         </ul>
     </section>
