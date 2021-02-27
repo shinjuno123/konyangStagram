@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/boardpage.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,9 +21,7 @@
         <div class="header-left">
             <a href="{% url 'mainpage' %}"><img src="" alt="">로고</a>
             <i class="fas fa-chevron-right"></i>
-            <a href="{% url 'boardpage' %}">전체 게시판</a>
-            <i class="fas fa-chevron-right" id="logo-board-icon"></i>
-            <p id="logo-board">문의사항</p>
+            <a href="{% url 'questionpage' %}">문의사항</a>
         </div>
         <div class="header-right">
             <div class="realtimeSearch">
@@ -39,74 +36,78 @@
                 </div>
             </div>
             <input type="text" placeholder="검색" id="search">
-            <span id="login">로그인</span>
-            <span id="signup">회원가입</span>
+            <a href="{% url 'loginSigninApp:login' %}" id="login">로그인</a>
+            <!-- <span id="signup">회원가입</span> -->
             <i class="fas fa-user"></i>
         </div>
     </header>
 
     <section class="chart">
         <!-- 문의사항 게시판 -->
-        <ul class="centerChart">
-            <div class="QAChart">
-                <div class="board">
-                    <p class="board-txt">문의사항 게시판</p>
-                </div>
-                <ul class="postChart">
-                    <li>
-                        <div>
-                            <p class="Qcount">4</p>
-                            <p class="postTitle">질문 있습니다~!</p>
-                            <p>new</p>
-                        </div>
-                        <div>
-                            <p class="writeTime">2021.02.24</p>
-                            <p class="postCount">답변 2</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p class="Qcount">3</p>
-                            <p class="postTitle">문의사항 있습니다~!</p>
-                            <p>new</p>
-                        </div>
-                        <div>
-                            <p class="writeTime">2021.02.23</p>
-                            <p class="postCount">답변 1</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p class="Qcount">2</p>
-                            <p class="postTitle">심심해요!</p>
-                            <p></p>
-                        </div>
-                        <div>
-                            <p class="writeTime">2021.02.22</p>
-                            <p class="postCount">답변 0</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p class="Qcount">1</p>
-                            <p class="postTitle">불편해요!</p>
-                            <p></p>
-                        </div>
-                        <div>
-                            <p class="writeTime">2021.02.21</p>
-                            <p class="postCount">답변 1</p>                            
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="Q-write">글쓰기</div>
+        <div class="QAChart">
+            <div class="board">
+                <p class="board-txt">문의사항 게시판</p>
             </div>
-        </ul>
+            <ul class="postChart">
+                <li>
+                    <div>
+                        <p class="Qcount">4</p>
+                        <p class="postTitle">질문 있습니다~!</p>
+                        <p>new</p>
+                    </div>
+                    <div>
+                        <p class="writeTime">2021.02.24</p>
+                        <p class="postCount">답변 2</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="Qcount">3</p>
+                        <p class="postTitle">문의사항 있습니다~!</p>
+                        <p>new</p>
+                    </div>
+                    <div>
+                        <p class="writeTime">2021.02.23</p>
+                        <p class="postCount">답변 1</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="Qcount">2</p>
+                        <p class="postTitle">심심해요!</p>
+                        <p></p>
+                    </div>
+                    <div>
+                        <p class="writeTime">2021.02.22</p>
+                        <p class="postCount">답변 0</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="Qcount">1</p>
+                        <p class="postTitle">불편해요!</p>
+                        <p></p>
+                    </div>
+                    <div>
+                        <p class="writeTime">2021.02.21</p>
+                        <p class="postCount">답변 1</p>                            
+                    </div>
+                </li>
+            </ul>
+            <div class="Q-write">글쓰기</div>
+            <div class="pageNum">
+                <p class="prev">&#60</p>
+                <p class="num">1</p>
+                <p class="num">2</p>
+                <p class="num selectedNum">3</p>
+                <p class="next">&#62</p>
+            </div>
+        </div>
 
         <!-- 문의사항 작성 -->
         <div class="writePost">
-            <p id="Q-postform">문의사항</p>
-            <form class="postform">
+            <p id="Q-postform">문의사항 작성</p>
+            <form class="Qpostform">
                 <div class="title">
                     <p class="title-txt">제목</p>
                     <input type="text" id="titleId" placeholder="*제목을 입력해 주세요.">
@@ -126,11 +127,10 @@
             </form>
         </div>
 
-
         <!-- Right Chart -->
         <ul class="rightChart">
             <ul class="noticeBoard">
-                <span><i class="fas fa-clipboard"></i>전체 게시판</span>
+                <a href="{% url 'boardpage' %}"><i class="fas fa-clipboard"></i>전체 게시판</a>
                 <li id="a2">의료IT공학과</li>
                 <li id="a3">간호학과</li>
                 <li id="a4">의공학과</li>
@@ -152,8 +152,8 @@
             </ul>
 
             <ul class="question">
-                <span><i class="fas fa-question-circle"></i>질의응답</span>
-                <li id="q2" >문의사항</li>
+                <a href="{% url 'questionpage' %}"><i class="fas fa-question-circle"></i>문의사항</a>
+                <li id="q2">문의사항 게시판</li>
             </ul>
         </ul>
     </section>
@@ -175,7 +175,6 @@
         </div>
     </div>
 
-    <script src="{% static 'js/mainpage.js' %}"></script>
     <script src="{% static 'js/question.js' %}"></script>
 </body>
 </html>

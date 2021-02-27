@@ -25,18 +25,18 @@ body{
 
 /* 전체 게시판 */
 .centerChart {
-    padding: 0 30px 20px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto;
+    margin: 0px;
 }
 
 .postList{
-    padding: 10px 10px 30px 10px;
+    padding: 10px 10px 35px 10px;
     width: 800px;
     max-width: 800px;
-    max-height: 363.8px;
+    margin-left: auto;
+    max-height: 368.8px;
     border-bottom: 1px dashed #bbbbbb;
 }
 
@@ -71,7 +71,7 @@ body{
 .postList .postChart {
     background-color: white;
     border: 1px solid rgba(0,0,0,0.09);
-    max-width: 800px;
+    margin-left: auto;
     padding: 20px;
     padding-bottom: 10px;
     display: flex;
@@ -83,11 +83,6 @@ body{
 }
 
 
-
-.postList .postChart:hover::-webkit-scrollbar-thumb {
-	background-color: #bbbbbb;
-}
-
 .postList .postChart::-webkit-scrollbar {
     height: 8px;
   }
@@ -96,7 +91,10 @@ body{
 }
 .postList .postChart::-webkit-scrollbar-thumb {
   border-radius: 3px;
-  background-color: transparent;
+  background-color:transparent;
+}
+.postList .postChart:hover::-webkit-scrollbar-thumb {
+    background-color: #bbbbbb;
 }
 .postList .postChart::-webkit-scrollbar-button {
   width: 5px;
@@ -116,7 +114,6 @@ body{
     border-radius: 10px;
     margin-bottom: 5px;
 }
-
 .postList .post-click>p:nth-child(1){
     padding:  38px 10px;
     border: 1px solid #bbbbbb;
@@ -124,6 +121,23 @@ body{
     font-size: 14px;
     line-height: 20px;
 }
+/* 
+.postList:nth-child(1) .post-click>p:nth-child(1){
+    background-color: lightblue;
+}
+
+.postList:nth-child(2) .post-click>p:nth-child(1){
+    background-color:lightcoral;
+}
+
+.postList:nth-child(3) .post-click>p:nth-child(1){
+    background-color:lightseagreen;
+}
+
+.postList:nth-child(4) .post-click>p:nth-child(1){
+    background-color:black;
+    color: white;
+} */
 
 
 
@@ -133,7 +147,7 @@ body{
     flex-direction: column;
     transition: all 0.2s ease;
     position: relative;
-    bottom: 220px;
+    bottom: 221px;
     height: 201px;
     cursor: pointer;
     
@@ -275,12 +289,19 @@ body{
     margin: 20px 0 5px 0;
     padding: 5px;
     width: 334px;
+    font-size: 15px;
   }
 
   #newBoard-explain{
     margin-bottom: 10px;
     padding: 5px;
     width: 334px;
+    font-size: 15px;
+  }
+
+  #newBoard-title::placeholder,
+  #newBoard-explain::placeholder{
+    font-size: 15px;
   }
 
   #newBoard-title:focus,
@@ -308,14 +329,14 @@ body{
 
 #add_btn{
     padding: 5px 10px;
-    margin-left: 284px;
+    margin-left: 280px;
     cursor: pointer;
     background-color: #ff8a3d;
     color: white;
     border: 2px solid #ff8a3d;
     border-radius: 3px;
     transition: all 0.3s ease;
-    width: 50px;
+    text-align: center;
 }
 
 #add_btn:hover{
@@ -338,12 +359,12 @@ body{
 .QAChart{
     display: flex;
     flex-direction: column;
-    padding: 20px;
     background-color: white;
     border-radius: 20px;
     padding: 30px;
     margin-top: 20px;
-    margin-left: 65px;
+    width: 800px;
+    margin-left: auto;
 }
 
 .QAChart .board{
@@ -351,7 +372,6 @@ body{
     border-bottom: 3px solid #bbbbbb;
     display: flex;
     justify-content: space-between;
-    width: 745px;
     padding: 10px 10px 15px 10px;
     margin-bottom: 2px;
 }
@@ -386,7 +406,9 @@ body{
 /* 게시물 번호 */
 .QAChart .postChart>li>div:nth-child(1)>p:nth-child(1){
     font-size: 13px;
-    padding: 0 10px;
+    width: 25px;
+    padding: auto;
+    text-align: center;
 }
 
 /* 게시물 제목 */
@@ -435,6 +457,32 @@ body{
     background-color: white;
 }
 
+/* 문의사항 게시판 페이지 번호 */
+.QAChart .pageNum{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.QAChart .pageNum .prev,
+.QAChart .pageNum .next{
+    border: 1px solid #bbbbbb;
+    border-radius: 30%;
+    padding: 5px 7.5px;
+    margin: 0px 5px;
+    font-size: 10px;
+    color: #bbbbbb; 
+    cursor: pointer;
+}
+
+.QAChart .pageNum .num{
+    font-size: 15px;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+
 /* 문의사항 작성*/
 .writePost { 
     margin: 0 0 30px 200px;
@@ -451,6 +499,7 @@ body{
     font-size: 20px;
     border-bottom: 2px solid #ff8a3d;
     margin: 0 0 20px 0;
+    font-weight: normal;
 }
 
 .writePost div{
@@ -533,20 +582,43 @@ body{
     min-height: 350px;
 }
 
+/* rightChart 전체게시판 */
+.rightChart a{
+    cursor:pointer;
+    font-size: 18px;
+    border-bottom: 2px solid #ff8a3d;
+    margin-bottom: 4px;
+}
+/*rightChart 선택 */
+.rightChart a:hover{
+    font-weight: bold;
+}
+
+/* 문의사항 페이지  선택 */
+.selectedNum{
+    color: #ff8a3d;
+}
+
 /* 게시판 안의 게시물들 */
 #posts{
     display: none;
 }
 
-@media screen and (max-width:1200px){
-    .postList{
-        width: 120%;
-    }
-}
 
-@media screen and (max-width:1400px){
+@media screen and (max-width:1300px){
+    .postList{
+        width: 110%;
+        min-width: 500px;
+        margin-left: auto;
+    }
     .writePost{
         width: 90%;
+        min-width: 500px;
+        margin-left: auto;
+    }
+    .QAChart{
+        width: 100%;
+        min-width: 500px;
         margin-left: auto;
     }
 }

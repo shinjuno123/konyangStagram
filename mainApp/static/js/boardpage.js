@@ -2,7 +2,6 @@
 const postClicks = document.querySelectorAll('.board-click');
 let postLists = document.querySelectorAll('.postList');
 const postCounts = document.querySelectorAll('.postCount');
-const QAClick = document.getElementById('q2');
 const centerChart = document.querySelector('.centerChart');
 const newBoard = document.querySelector('.newBoard');
 const logoBoardIcon = document.getElementById('logo-board-icon');
@@ -47,78 +46,89 @@ function editBoardFunc(e){
         elem.querySelector('.editBoard').style.display = "none";
     }
     
-    
 }
 
 //새 게시판 생성
 function addNewBoardFunc() {
-    document.getElementById("modal").style.display="none";
-    //Create postTitle
-    const postTitle = document.createElement('p');
-    postTitle.classList.add('postTitle');
-    postTitle.innerHTML= document.getElementById('newBoard-title').value;
-    //Create postExplain
-    const postExplain = document.createElement('p');
-    postExplain.classList.add('postExplain');
-    postExplain.innerHTML = document.getElementById('newBoard-explain').value;
-    //Create board-click
-    const boardClick = document.createElement('div');
-    boardClick.classList.add('board-click');
-    boardClick.appendChild(postTitle);
-    boardClick.appendChild(postExplain);
-    //Create postCount
-    const postCount = document.createElement('p');
-    postCount.classList.add('postCount');
-    postCount.innerHTML = "posts 0";
-    //Create editboardIcon
-    const editboardIcon = document.createElement('i');
-    editboardIcon.classList.add('fas');
-    editboardIcon.classList.add('fa-ellipsis-h');
-    //Create postMenu
-    const postMenu = document.createElement('div');
-    postMenu.classList.add('postMenu');
-    postMenu.appendChild(postCount);
-    postMenu.appendChild(editboardIcon);
-    //Create board-title
-    const boardTitle = document.createElement('div');
-    boardTitle.classList.add('board-title');
-    boardTitle.appendChild(boardClick);
-    boardTitle.appendChild(postMenu);
-    //Create NoPost
-    const noPost = document.createElement('p');
-    noPost.classList.add('noPost');
-    noPost.innerHTML = "게시물이 존재하지 않습니다.";
-    //Create Div
-    const div = document.createElement('div');
-    div.appendChild(noPost);
-    //Create li
-    const li = document.createElement('li');
-    li.appendChild(div);
-    //Create postChart
-    const postChart = document.createElement('ul');
-    postChart.classList.add('postChart');
-    postChart.id = 'scroll';
-    postChart.appendChild(li);
-    //Create p
-    const addPost = document.createElement('p');
-    addPost.classList.add('addPost');
-    //Create p
-    const deleteBoard = document.createElement('p');
-    deleteBoard.classList.add('deleteBoard');
-    //Create editBoard
-    const editBoard = document.createElement('div');
-    editBoard.classList.add('editBoard');
-    editBoard.appendChild(addPost);
-    editBoard.appendChild(deleteBoard);
-    //Create postList
-    const postList =  document.createElement('div');
-    postList.classList.add('postList');
-    postList.appendChild(boardTitle);
-    postList.appendChild(postChart);
-    postList.appendChild(editBoard);
-    //Append centerChart
-    centerChart.appendChild(postList);
+    if(document.getElementById('newBoard-title').value === ""){
+        alert('게시판 제목을 입력하세요!');
+    }
+    else if(document.getElementById('newBoard-explain').value === ""){
+        alert('한 줄 설명을 입력하세요!');
+    }
+    else{
+        document.getElementById("modal").style.display="none";
+        //Create postTitle
+        const postTitle = document.createElement('p');
+        postTitle.classList.add('postTitle');
+        postTitle.innerHTML= document.getElementById('newBoard-title').value;
+        //Create postExplain
+        const postExplain = document.createElement('p');
+        postExplain.classList.add('postExplain');
+        postExplain.innerHTML = document.getElementById('newBoard-explain').value;
+        //Create board-click
+        const boardClick = document.createElement('div');
+        boardClick.classList.add('board-click');
+        boardClick.appendChild(postTitle);
+        boardClick.appendChild(postExplain);
+        //Create postCount
+        const postCount = document.createElement('p');
+        postCount.classList.add('postCount');
+        postCount.innerHTML = "posts 0";
+        //Create editboardIcon
+        const editboardIcon = document.createElement('i');
+        editboardIcon.classList.add('fas');
+        editboardIcon.classList.add('fa-ellipsis-h');
+        //Create postMenu
+        const postMenu = document.createElement('div');
+        postMenu.classList.add('postMenu');
+        postMenu.appendChild(postCount);
+        postMenu.appendChild(editboardIcon);
+        //Create board-title
+        const boardTitle = document.createElement('div');
+        boardTitle.classList.add('board-title');
+        boardTitle.appendChild(boardClick);
+        boardTitle.appendChild(postMenu);
+        //Create NoPost
+        const noPost = document.createElement('p');
+        noPost.classList.add('noPost');
+        noPost.innerHTML = "게시물이 존재하지 않습니다.";
+        //Create Div
+        const div = document.createElement('div');
+        div.appendChild(noPost);
+        //Create li
+        const li = document.createElement('li');
+        li.appendChild(div);
+        //Create postChart
+        const postChart = document.createElement('ul');
+        postChart.classList.add('postChart');
+        postChart.id = 'scroll';
+        postChart.appendChild(li);
+        //Create p
+        const addPost = document.createElement('p');
+        addPost.classList.add('addPost');
+        addPost.innerHTML = "게시물 추가"
+        //Create p
+        const deleteBoard = document.createElement('p');
+        deleteBoard.classList.add('deleteBoard');
+        deleteBoard.innerHTML = "게시판 삭제";
+        //Create editBoard
+        const editBoard = document.createElement('div');
+        editBoard.classList.add('editBoard');
+        editBoard.appendChild(addPost);
+        editBoard.appendChild(deleteBoard);
+        //Create postList
+        const postList =  document.createElement('div');
+        postList.classList.add('postList');
+        postList.appendChild(boardTitle);
+        postList.appendChild(postChart);
+        postList.appendChild(editBoard);
+        //Append centerChart
+        centerChart.appendChild(postList);
 
+        //게시판 메뉴 
+        editboardIcon.addEventListener('click',editBoardFunc);
+    }
 }
 
 //새 게시판 생성 모달 창

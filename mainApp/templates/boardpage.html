@@ -1,20 +1,14 @@
-<!DOCTYPE html>
 {% load static %}
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/boardpage.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
-    <script
-      src="https://kit.fontawesome.com/bc1f5db172.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/bc1f5db172.js" crossorigin="anonymous"></script>
     <title>Konstargram</title>
 </head>
 <body>
@@ -39,8 +33,8 @@
                 </div>
             </div>
             <input type="text" placeholder="검색" id="search">
-            <span id="login">로그인</span>
-            <span id="signup">회원가입</span>
+            <a href="{% url 'loginSigninApp:login' %}" id="login">로그인</a>
+            <!-- <span id="signup">회원가입</span> -->
             <i class="fas fa-user"></i>
         </div>
     </header>
@@ -613,13 +607,12 @@
                 </div>
             </li>
         </ul>
-        
 
 
         <!-- Right Chart -->
         <ul class="rightChart">
             <ul class="noticeBoard">
-                <span><i class="fas fa-clipboard"></i>전체 게시판</span>
+                <a href="{% url 'boardpage' %}"><i class="fas fa-clipboard"></i>전체 게시판</a>
                 <li id="a2">의료IT공학과</li>
                 <li id="a3">간호학과</li>
                 <li id="a4">의공학과</li>
@@ -641,8 +634,8 @@
             </ul>
 
             <ul class="question">
-                <span><i class="fas fa-question-circle"></i>질의응답</span>
-                <a href="{% url 'questionpage' %}" id="q2">문의사항</li>
+                <a href="{% url 'questionpage' %}"><i class="fas fa-question-circle"></i>문의사항</a>
+                <li id="q2">문의사항 게시판</li>
             </ul>
         </ul>
     </section>
@@ -664,7 +657,6 @@
         </div>
     </div>
 
-    <script src="{% static 'js/mainpage.js' %}"></script>
     <script src="{% static 'js/boardpage.js' %}"></script>
 </body>
 </html>
