@@ -23,6 +23,8 @@ body{
 }
 
 
+
+
 /* 전체 게시판 */
 .centerChart {
     display: flex;
@@ -198,8 +200,6 @@ body{
     position: relative;
     bottom: 260px;
     justify-content: space-evenly;
-    width: 780px;
-    height: 260px;
     font-size: 20px;
     font-weight: bold;
     padding: 100px 0px 135px 5px;
@@ -232,10 +232,11 @@ body{
     border: 2px solid #ff8a3d;
     border-radius: 50px;
     padding: 10px 20px;
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
+    position: relative;
+    left: 100px;
     cursor: pointer;
     width: 160px;
-    margin-left: 485px;
     text-align: center;
     transition: all 0.3s ease;
 }
@@ -259,13 +260,15 @@ body{
   }
   
   #modal .newBoard-modal {
-    width:400px;
-    margin:auto;
+    width:375px;
+    display: flex;
+    flex-direction: column;
     padding:30px;
     background:#fff;
     position: relative;
-    left: 70px;
-    bottom: 500px;
+    bottom: 400px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 10px;
   }
 
@@ -288,14 +291,12 @@ body{
   #newBoard-title{
     margin: 20px 0 5px 0;
     padding: 5px;
-    width: 334px;
     font-size: 15px;
   }
 
   #newBoard-explain{
     margin-bottom: 10px;
     padding: 5px;
-    width: 334px;
     font-size: 15px;
   }
 
@@ -319,17 +320,12 @@ body{
     height:100%;
     background:rgba(0, 0, 0, 0.5);
     z-index:-1;
-  }   
-
-#modal .newBoard-modal .button-modal{
-    display: flex;
-    width: 334px;
-}    
+  }      
 
 
 #add_btn{
     padding: 5px 10px;
-    margin-left: 280px;
+    margin-left: auto;
     cursor: pointer;
     background-color: #ff8a3d;
     color: white;
@@ -355,6 +351,7 @@ body{
     justify-content: center;
 }
 
+
 /* 문의사항 게시판 */
 .QAChart{
     display: flex;
@@ -362,7 +359,6 @@ body{
     background-color: white;
     border-radius: 20px;
     padding: 30px;
-    margin-top: 20px;
     width: 800px;
     margin-left: auto;
 }
@@ -485,13 +481,13 @@ body{
 
 /* 문의사항 작성*/
 .writePost { 
-    margin: 0 0 30px 200px;
     flex-direction: column;  
     background-color: white;
     border-radius: 20px;
     padding: 30px;  
-    max-width: 800px;
+    width: 800px;
     height: auto;
+    margin-left: auto;
 }
 
 #Q-postform{
@@ -579,10 +575,11 @@ body{
 }
 
 #contentId{
-    min-height: 350px;
+    min-height: 250px;
 }
 
 /* rightChart 전체게시판 */
+
 .rightChart a{
     cursor:pointer;
     font-size: 18px;
@@ -605,20 +602,72 @@ body{
 }
 
 
-@media screen and (max-width:1300px){
+/* pc웹 사이즈 조정 */
+@media screen and (max-width:1400px){
     .postList{
         width: 110%;
-        min-width: 500px;
-        margin-left: auto;
+        min-width: 426px
     }
+    
+    .QAChart,
     .writePost{
         width: 90%;
-        min-width: 500px;
-        margin-left: auto;
+        min-width: 426px;
     }
-    .QAChart{
-        width: 100%;
-        min-width: 500px;
-        margin-left: auto;
+
+    .rightChart{
+        min-width: 200px;
+    }
+    .newBoard{
+        left: 70px;
+    }
+    .newBoard-modal{
+        left: 80px;
+    }
+    
+}
+@media screen and (max-width:1300px){
+    header{
+        padding: 16px 38px ;
+    }
+
+}
+
+@media screen and (max-width:900px){
+    .realtimeSearch,
+    .rightChart{
+        display: none;
+    }
+    .newBoard-modal{
+        left: 20px;
+    }
+    .chart{
+        margin: 0 auto 0 10%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .chart{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:376px){
+    header{
+        padding: 13px;
+    }
+    #search,
+    .postCount{
+        display: none;
+    }
+    .postList{
+        min-width: 310px;
+    }
+    .newBoard-modal{
+        min-width: 350px;
+        left: -20px;
+    }
+    .noPost{
+        width: 262px;
     }
 }

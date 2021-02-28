@@ -199,3 +199,4 @@ for(let slider of sliders){
         slider.scrollLeft = scrollLeft - walk;
     })
 }
+

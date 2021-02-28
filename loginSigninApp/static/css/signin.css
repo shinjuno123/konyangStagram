@@ -6,19 +6,16 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    margin: 100px auto;
+    width: 400px;
 }
 
 
 /* 로고 */
 #header{
-    width: 400px;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    margin-right: auto;
 }
 .logo{
     margin: 0px;
@@ -48,20 +45,12 @@ a {
 .details{
     border-radius: 20px;
     border: 1px solid #bbbbbb;
-    width: 400px;
     background-color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 30px 0px;
+    padding: 30px;
 }
 
-.input_box {
-    position: relative;
-    flex-direction: column;
-    padding: 0px;
-    margin: 5px 0px;
-}
 
 #userid,
 #userpw,
@@ -70,15 +59,11 @@ a {
     height: 52px;
     border-radius: 5px;
     border: 1px solid #bbbbbb;
-    margin-bottom: 10px;
+    margin-top: 10px;
     padding: 0px;
 }
 
-.input_box_detail{
-    position: relative;
-    left:50%;
-    transform: translateX(-50%);
-}
+
 
 #signin_btn {
     background-color: #FF8A3D;
@@ -88,7 +73,7 @@ a {
     font-weight: bold;
     line-height: 30px;
     cursor: pointer;
-    margin: 10px 0 20px 0;
+    margin: 0 0 20px 0;
 }
 
 #userid::placeholder,
@@ -96,16 +81,17 @@ a {
     color: #bbbbbb;
     font-size: 13px;
     padding-left: 10px;
+    padding-right: auto;
 }
 
 #showIcon{
-    position: absolute;
-    margin-left: 2px;
-    top: 47%;
-    transform: translate(-170%,-100%);
+    position: relative;
+    bottom: 40px;
+    left: 300px;
     color: #bbbbbb;
     cursor: pointer;
 }
+
 /* login_details */
 .login_details{
     display: flex;
@@ -143,10 +129,10 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0px 20px;
 }
 
 .find_box {
-    width: 332px;
     height: 52px;
     display: flex;
     align-items: center;
@@ -188,7 +174,6 @@ a {
 #pwfind_btn {
     background-color: #FF8A3D;
 
-    width: 332px;
     height: 52px;
     border-radius: 5px;
     border: 1px solid #FF8A3D;
@@ -222,4 +207,25 @@ a {
 #input2,
 #input3{
     display: none;
+}
+
+@media screen and (max-width:376px){
+    #container,
+    .details,
+    .input_box1,
+    .login_details,
+    .line,
+    #userid,
+    #userpw,
+    #signin_btn{
+        width: 300px;
+    }
+
+    #showIcon{
+        display: none;
+    }
+
+    #signin_btn{
+        margin-top: 20px;
+    }
 }

@@ -6,15 +6,12 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
     border-radius: 20px;
     border: 1px solid #bbbbbb;
     width: 400px;
     background-color: white;
     padding: 20px 0px;
+    margin: 85px auto;
 }
 
 /* 로고 */
@@ -188,7 +185,7 @@ a {
     height: 52px;
     border-radius: 5px;
     border: 1px solid #bbbbbb;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding: 0px;
 }
 
@@ -210,20 +207,14 @@ select::-ms-expand {
     display: none; 
 }
 
-#select_num {
-    position: absolute;
-    left: 85%;
-    top: 32%;
-    color: #bbbbbb;
-    cursor: pointer;
-}
-
+#select_num,
 #select_dept {
-    position: absolute;
-    left: 85%;
-    top: 43%;
+    position: relative;
+    left: 310px;
+    bottom: 50px;
     color: #bbbbbb;
     cursor: pointer;
+    height: 0px;
 }
 
 #useremail::placeholder,
@@ -248,4 +239,41 @@ select::-ms-expand {
     line-height: 30px;
     cursor: pointer;
     margin: 10px 0;
+}
+
+@media screen and (max-width:376px){
+    #container{
+        width: auto;
+    }
+    .username,
+    #userphone,
+    #certification,
+    #cf_success,
+    #usernum,
+    #userdept,
+    #cf_box,
+    #username,
+    #usernum,
+    #userdept,
+    #useremail,
+    #userid,
+    #userpw,
+    #signup_btn {
+        width: 300px;
+    }
+
+    #next,
+    #next_on{
+        margin-right: 30px;
+    }
+
+    #select_num{
+        position: absolute;
+        top: 278px;
+    }
+
+    #select_dept{
+        position: absolute;
+        top: 342px;
+    }
 }

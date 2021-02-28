@@ -28,31 +28,28 @@
         </header>
 
         <div class="details" id="input_box">
-            <div class="input_box" >
-                <div class="input_box_detail">
-                    <form>
-                        <input type="text" placeholder="아이디를 입력하세요." id="userid" name="user_id">
-                        <div class="password-box">
-                            <input type="password" placeholder="비밀번호를 입력하세요." id="userpw" name="user_pw">
-                            <i class="far fa-eye-slash" id="showIcon"></i>
-                        </div>
-                        <input type="submit" value="로그인" id="signin_btn" onclick="">
-                    </form>
+            <div class="input_box_detail">
+                <form>
+                    <input type="text" placeholder="아이디를 입력하세요." id="userid" name="user_id">
+                    <div class="password-box">
+                        <input type="password" placeholder="비밀번호를 입력하세요." id="userpw" name="user_pw">
+                        <i class="far fa-eye-slash" id="showIcon"></i>
+                    </div>
+                    <input type="submit" value="로그인" id="signin_btn" onclick="">
+                </form>
+            </div>
+            <div class="login_details">
+                <hr class="line" size="1" color="#bbbbbb">
+
+                <div class="find">
+                    <a id="find_idpw">아이디/비밀번호 찾기</a>
                 </div>
-                <div class="login_details">
-                    <hr class="line" size="1" color="#bbbbbb">
 
-                    <div class="find">
-                        <a id="find_idpw">아이디/비밀번호 찾기</a>
-                    </div>
-
-                    <div class="signUp">
-                        <span>계정이 아직 없으신가요? </span>
-                        <a href="{% url 'loginSigninApp:signup' %}">회원가입</a>
-                    </div>
+                <div class="signUp">
+                    <span>계정이 아직 없으신가요? </span>
+                    <a href="{% url 'loginSigninApp:signup' %}">회원가입</a>
                 </div>
             </div>
-
         </div>
 
          <!-- 아이디 찾기 -->
