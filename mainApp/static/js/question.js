@@ -8,8 +8,36 @@ let year = today.getFullYear(); // 년도
 let month = today.getMonth() + 1;  // 월
 let date = today.getDate();  // 날짜
 let day = today.getDay();  // 요일
+const rightMenu = document.getElementById('rightMenu');
+const Qtitles = document.querySelectorAll('.postTitle');
+const Qpost = document.querySelector('.questionPost');
+const Qlist = document.querySelector('.Qlist');
 
-// Function
+
+//Function
+//문의사항 게시글 -> 문의사항 목록
+Qlist.addEventListener('click', () => {
+    Qpost.style.display = "none";
+    QAChart.style.display = "flex";
+})
+
+//문의사항 게시글 상세
+for(let Qtitle of Qtitles){
+    Qtitle.addEventListener('click', () => {
+        QAChart.style.display = "none";
+        Qpost.style.display = "flex";
+        Qpost.querySelector('.Qtitle').innerHTML 
+            = "Q. " + Qtitle.innerHTML;
+        Qpost.querySelector('.Qtime').innerHTML 
+            = "작성일: " + Qtitle.parentElement.parentElement.querySelector('.writeTime').innerHTML;
+    })
+}
+
+//rightMenu
+rightMenu.addEventListener('click',() => {
+    document.querySelector('.rightChart').classList.toggle('active');
+})
+
 //문의사항 게시글 추가
 function newQboardFunc(){
     if(Qwrite.parentElement.parentElement.querySelector('.title>input').value === ""){

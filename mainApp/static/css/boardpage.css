@@ -4,13 +4,15 @@ body{
 }
 
 /* 로고 옆 게시판 추가 */
-.header-left {
+.header-left,
+.header-right {
     display: flex;
+    align-items: center;
 }
 
 .header-left > i {
     color: #ff8a3d;
-    padding-right: 5px;
+    padding-right: 0.3125rem;
     cursor: default;
 }
 
@@ -21,6 +23,16 @@ body{
 #logo-board{
     cursor: pointer;
 }
+#login{
+    font-size: 0.75rem;
+}
+#rightMenu{
+    display: none;
+    color: #ff8a3d;
+    margin-left: 0.8rem;
+}
+
+
 
 
 
@@ -34,12 +46,12 @@ body{
 }
 
 .postList{
-    padding: 10px 10px 35px 10px;
-    width: 800px;
-    max-width: 800px;
+    padding: 0.625rem 0.625rem 2.1875rem 0.625rem;
+    width: 50rem;
+    max-width: 50rem;
     margin-left: auto;
-    max-height: 368.8px;
-    border-bottom: 1px dashed #bbbbbb;
+    max-height: 23.05rem;
+    border-bottom: 0.0625rem dashed #bbbbbb;
 }
 
 .postList .board-title{
@@ -49,22 +61,23 @@ body{
 }
 
 .postList .board-click{
-    margin: 15px 5px;
+    margin: 0.9375rem 0.3125rem;
     cursor: pointer;
 }
 
 
 .postList .postTitle{
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .postList .postExplain{
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 .postList .postCount{
-    font-size: 13px;
-    margin-right: 10px;
+    font-size: 0.8125rem;
+    margin-right: 0.625rem;
     color: #ff8a3d;
 }
 
@@ -74,54 +87,54 @@ body{
     background-color: white;
     border: 1px solid rgba(0,0,0,0.09);
     margin-left: auto;
-    padding: 20px;
-    padding-bottom: 10px;
+    padding: 1.25rem;
+    padding-bottom: 0.625rem;
     display: flex;
     width: auto;
 	overflow-x: auto;
 	overflow-y: hidden;
-    border-radius: 10px;
-    height: 262px;
+    border-radius: 0.625rem;
+    height: 16.375rem;
 }
 
 
 .postList .postChart::-webkit-scrollbar {
-    height: 8px;
+    height: 0.5rem;
   }
 .postList .postChart::-webkit-scrollbar-track {
   background-color: transparent;
 }
 .postList .postChart::-webkit-scrollbar-thumb {
-  border-radius: 3px;
+  border-radius: 0.1875rem;
   background-color:transparent;
 }
 .postList .postChart:hover::-webkit-scrollbar-thumb {
     background-color: #bbbbbb;
 }
 .postList .postChart::-webkit-scrollbar-button {
-  width: 5px;
+  width: 0.3125rem;
 }
 
 .postList .post-click{
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-right: 20px;
+    margin-right: 1.25rem;
 }
 
 .postList .post-click>img,
 .postList .post-click>p:nth-child(1){
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    margin-bottom: 5px;
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 0.625rem;
+    margin-bottom: 0.3125rem;
 }
 .postList .post-click>p:nth-child(1){
-    padding:  38px 10px;
-    border: 1px solid #bbbbbb;
+    padding:  2.375rem 0.625rem;
+    border: 0.0625rem solid #bbbbbb;
     text-align: left;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
 }
 /* 
 .postList:nth-child(1) .post-click>p:nth-child(1){
@@ -149,8 +162,8 @@ body{
     flex-direction: column;
     transition: all 0.2s ease;
     position: relative;
-    bottom: 221px;
-    height: 201px;
+    bottom: 13.8125rem;
+    height: 12.5625rem;
     cursor: pointer;
     
 }
@@ -160,22 +173,22 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px;
+    padding: 0.5rem;
     background-color: rgba(256, 256, 256, 0.5);
 }
 
 .post-click .postHover .post-top{
     margin-bottom: auto;
-    border-bottom:1px solid rgba(0, 0, 0, 0.09);
+    border-bottom:0.0625rem solid rgba(0, 0, 0, 0.09);
 }
 
 .post-click .postHover .post-bottom{
-    border-top: 1px solid rgba(0, 0, 0, 0.09);
+    border-top: 0.0625rem solid rgba(0, 0, 0, 0.09);
 }
 
 .post-click i,
 .post-click .postComment{
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight:normal;
 }
 
@@ -198,13 +211,13 @@ body{
 .postList .editBoard{
     display: none;
     position: relative;
-    bottom: 260px;
+    bottom: 16.25rem;
     justify-content: space-evenly;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
-    padding: 100px 0px 135px 5px;
-    border: 1px solid rgba(0, 0, 0, 0.09);
-    border-radius: 10px;
+    padding: 6.25rem 0 8.4375rem 0.3125rem;
+    border: 0.0625rem solid rgba(0, 0, 0, 0.09);
+    border-radius: 0.625rem;
 }
 
 .postList .editBoard>p{
@@ -215,11 +228,11 @@ body{
     background-color: rgba(256, 256, 256, 0.5);
     color: #ff8a3d;
     cursor: pointer;
-    padding: 10px 20px;
-    border: 2px solid #ff8a3d;
-    border-radius: 50px;
+    padding: 0.625rem 1.25rem;
+    border: 0.125rem solid #ff8a3d;
+    border-radius: 3.125rem;
     transition: all 0.2s ease;
-    height: 48px;
+    height: 3rem;
 
 }
 
@@ -229,14 +242,14 @@ body{
     background-color: #ff8a3d;
     color: white;
     font-weight: bold;
-    border: 2px solid #ff8a3d;
-    border-radius: 50px;
-    padding: 10px 20px;
-    margin: 20px auto 0 auto;
+    border: 0.125rem solid #ff8a3d;
+    border-radius: 3.125rem;
+    padding: 0.625rem 1.25rem;
+    margin: 1.25rem auto 0 auto;
     position: relative;
-    left: 100px;
+    left: 6.25rem;
     cursor: pointer;
-    width: 160px;
+    width: 10rem;
     text-align: center;
     transition: all 0.3s ease;
 }
@@ -260,16 +273,16 @@ body{
   }
   
   #modal .newBoard-modal {
-    width:375px;
+    width:23.4375rem;
     display: flex;
     flex-direction: column;
-    padding:30px;
+    padding:1.875rem;
     background:#fff;
     position: relative;
-    bottom: 400px;
+    bottom: 25rem;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 10px;
+    border-radius: 0.625rem;
   }
 
   .newBoard-modal>div{
@@ -279,7 +292,7 @@ body{
 
   #modal_close_btn{
       transition: all 0.3s ease;
-      font-size: 18px;
+      font-size: 1.125rem;
   }
   
   #modal_close_btn:hover{
@@ -289,26 +302,26 @@ body{
   }
 
   #newBoard-title{
-    margin: 20px 0 5px 0;
-    padding: 5px;
-    font-size: 15px;
+    margin: 1.25rem 0 0.3125rem 0;
+    padding: 0.3125rem;
+    font-size: 0.9375rem;
   }
 
   #newBoard-explain{
-    margin-bottom: 10px;
-    padding: 5px;
-    font-size: 15px;
+    margin-bottom: 0.625rem;
+    padding: 0.3125rem;
+    font-size: 0.9375rem;
   }
 
   #newBoard-title::placeholder,
   #newBoard-explain::placeholder{
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 
   #newBoard-title:focus,
   #newBoard-explain:focus{
       border: 0px;
-      outline: 1.5px solid #ff8a3d;
+      outline: 0.09375rem  solid #ff8a3d;
   }
 
   
@@ -324,13 +337,13 @@ body{
 
 
 #add_btn{
-    padding: 5px 10px;
+    padding: 0.3125rem 0.625rem;
     margin-left: auto;
     cursor: pointer;
     background-color: #ff8a3d;
     color: white;
-    border: 2px solid #ff8a3d;
-    border-radius: 3px;
+    border: 0.125rem solid #ff8a3d;
+    border-radius: 0.1875rem;
     transition: all 0.3s ease;
     text-align: center;
 }
@@ -343,11 +356,11 @@ body{
 
 .noPost{
     display: flex;
-    font-size: 13px;
-    width: 750px;
-    height: 220px;
+    font-size: 0.8125rem;
+    width: 46.875rem;
+    height: 13.75rem;
     align-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
     justify-content: center;
 }
 
@@ -357,26 +370,26 @@ body{
     display: flex;
     flex-direction: column;
     background-color: white;
-    border-radius: 20px;
-    padding: 30px;
-    width: 800px;
+    border-radius: 1.25rem;
+    padding: 1.875rem;
+    width: 50rem;
     margin-left: auto;
 }
 
 .QAChart .board{
-    font-size: 20px;
-    border-bottom: 3px solid #bbbbbb;
+    font-size: 1.25rem;
+    border-bottom: 0.1875rem solid #bbbbbb;
     display: flex;
     justify-content: space-between;
-    padding: 10px 10px 15px 10px;
-    margin-bottom: 2px;
+    padding: 0.625rem 0.625rem 0.9375rem 0.625rem;
+    margin-bottom: 0.125rem;
 }
 
 .QAChart .postChart{
     display: flex;
     flex-direction: column;
     list-style-type:initial;
-    border-top: 1px solid #bbbbbb;
+    border-top: 0.0625rem solid #bbbbbb;
 }
 
 .QAChart .postChart>li,
@@ -391,65 +404,67 @@ body{
 }
 
 .QAChart .postChart>li{
-    border-bottom: 1px solid #bbbbbb;
-    padding: 10px;
+    border-bottom: 0.0625rem solid #bbbbbb;
+    padding: 0.625em;
 }
 
 .QAChart .postChart .postTitle{
-    margin-left: 10px;
+    margin-left: 0.625em;
 }
 
 /* 게시물 번호 */
 .QAChart .postChart>li>div:nth-child(1)>p:nth-child(1){
-    font-size: 13px;
-    width: 25px;
+    font-size: 0.8125rem;
+    width: 1.5625rem;
     padding: auto;
     text-align: center;
 }
 
 /* 게시물 제목 */
 .QAChart .postChart>li>div:nth-child(1)>p:nth-child(2){
-    font-size: 15px;
+    font-size: 0.9375rem;
     cursor: pointer;
 }
 
 /* new 표시 */
 .QAChart .postChart>li>div:nth-child(1)>p:nth-child(3){ 
-    font-size: 10px;
+    font-size: 0.625rem;
     color: #ff8a3d;
-    margin-left: 10px;
-    line-height: 18px;
+    margin-left: 0.625rem;
+    line-height: 1.125rem;
 }
 
 /* 게시물 작성일 */
 .QAChart .postChart>li>div:nth-child(2)>p:nth-child(1){
-    margin: 0px 20px;
-    font-size: 13px;
+    margin: 0 1.25rem;
+    font-size: 0.8125rem;
 }
 .postCount{
-    font-size: 10px;
+    font-size: 0.625rem;
     color: #bbbbbb;
-    line-height: 20px;
+    line-height: 1.25rem;
 
 }
 
 /* 문의사항 글쓰기 버튼 */
-.Q-write{
-    margin: 15px 0px 0px auto;
+.Q-write,
+.Qlist{
+    margin: 0.9375rem 0 0 auto;
     transition: all 0.3s ease;
-    font-size: 13px;
-    padding: 5px 10px;
+    font-size: 0.8125rem;
+    padding: 0.3125rem 0.625rem;
     border: 1px solid #ff8a3d;
     background-color: #ff8a3d;
     color: white;
-    border-radius: 2px;
+    border-radius: 0.125rem;
 }
 
-.Q-write:hover{
+.Q-write:hover,
+.Qlist:hover{
     cursor: pointer;
     color: #ff8a3d;
     transition: all 0.3s ease;
-    border: 1px solid #ff8a3d;
+    border: 0.0625rem solid #ff8a3d;
     background-color: white;
 }
 
@@ -463,38 +478,84 @@ body{
 
 .QAChart .pageNum .prev,
 .QAChart .pageNum .next{
-    border: 1px solid #bbbbbb;
+    border: 0.0625rem solid #bbbbbb;
     border-radius: 30%;
-    padding: 5px 7.5px;
-    margin: 0px 5px;
-    font-size: 10px;
+    padding: 0.3125rem 0.46875rem;
+    margin: 0 0.3125rem;
+    font-size: 0.625rem;
     color: #bbbbbb; 
     cursor: pointer;
 }
 
 .QAChart .pageNum .num{
-    font-size: 15px;
-    margin: 0px 5px;
+    font-size: 0.9375rem;
+    margin: 0 0.3125rem;
     cursor: pointer;
+}
+
+/* 문의사항 게시글 상세 */
+.questionPost .Qpost-title{
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 1.25rem;
+    font-size: 1.25rem;
+    border-top: 2px solid #bbbbbb;
+    border-bottom: 1px solid #bbbbbb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+.questionPost .Qpost-title .Qtime{
+    font-size: 0.8rem;
+}
+.questionPost .Qpost-content{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1.25rem;
+    font-size: 1rem;
+    border-bottom: 2px solid #bbbbbb;
+    min-height: 15.625rem;
+    line-height: 1.5rem;
+}
+
+.questionPost .answerPost{
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    border: 1px dashed #bbbbbb;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+}
+
+.questionPost .answerPost .Atitle{
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 
 /* 문의사항 작성*/
+.questionPost{
+    display: none;
+    flex-direction: column;  
+    margin-left: auto;
+    width: 50rem;
+}
 .writePost { 
+    display: none;
     flex-direction: column;  
     background-color: white;
-    border-radius: 20px;
-    padding: 30px;  
-    width: 800px;
+    border-radius: 1.25rem;
+    padding: 1.875rem;  
+    width: 50rem;
     height: auto;
     margin-left: auto;
 }
 
 #Q-postform{
-    padding: 10px;
-    font-size: 20px;
+    padding: 0.625rem;
+    font-size: 1.25rem;
     border-bottom: 2px solid #ff8a3d;
-    margin: 0 0 20px 0;
+    margin: 0 0 1.25rem 0;
     font-weight: normal;
 }
 
@@ -503,30 +564,30 @@ body{
     margin-left: auto;
 }
 .writePost p{
-    margin-right: 10px;
-    font-size: 13px;
-    line-height: 26px;
+    margin-right: 0.625rem;
+    font-size: 0.8125rem;
+    line-height: 1.625rem;
 }
 
 .writePost>form >div p{
-    min-width: 32px;
+    min-width: 2rem;
 }
 
 #titleId,
 #contentId,
 #passwordId{
-    border: 1px solid #bbbbbb;
-    padding: 5px;
-    font-size: 13px;
-    width: 800px;
-    border-radius: 5px;
+    border: 0.0625rem solid #bbbbbb;
+    padding: 0.3125rem;
+    font-size: 0.8125rem;
+    width: 50rem;
+    border-radius: 0.3125rem;
 }
 
 #titleId::placeholder,
 #contentId::placeholder,
 #passwordId::placeholder{
     color: #bbbbbb;
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-family: 'Nanum Gothic', sans-serif;
 }
 
@@ -534,7 +595,7 @@ body{
 #contentId:focus,
 #passwordId:focus{
     border: 0px;
-    outline: 1.5px solid #ff8a3d;
+    outline: 0.09375rem solid #ff8a3d;
 }
 
 #write {
@@ -542,13 +603,13 @@ body{
     background-color: #ff8a3d;
     color: white;
     font-weight: bold;
-    font-size: 15px;
-    width: 60px;
-    height: 35px;
-    border: 2px solid #ff8a3d;
-    border-radius: 5px;
+    font-size: 0.9375rem;
+    width: 3.75rem;
+    height: 2.1875rem;
+    border: 0.125rem solid #ff8a3d;
+    border-radius: 0.3125rem;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 0.625rem;
     transition: all 0.3s ease;
 }
 
@@ -559,7 +620,7 @@ body{
 }
 
 .centerChart:nth-child(3) .board-click {
-    line-height: 28px;
+    line-height: 1.75rem;
 }
 
 .centerChart:nth-child(3) .postChart i{
@@ -567,24 +628,24 @@ body{
 }
 
 #essential{
-    font-size: 10px;
+    font-size: 0.625rem;
     color: #ff8a3d;
-    width: 100px;
-    line-height: 35px;
-    margin: 10px 0 0 auto;
+    width: 6.25rem;
+    line-height: 2.1875rem;
+    margin: 0.625rem 0 0 auto;
 }
 
 #contentId{
-    min-height: 250px;
+    min-height: 15.625rem;
 }
 
 /* rightChart 전체게시판 */
 
 .rightChart a{
     cursor:pointer;
-    font-size: 18px;
+    font-size: 1.125rem;
     border-bottom: 2px solid #ff8a3d;
-    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
 }
 /*rightChart 선택 */
 .rightChart a:hover{
@@ -603,20 +664,22 @@ body{
 
 
 /* pc웹 사이즈 조정 */
-@media screen and (max-width:1400px){
+/* max-width: 1400px */
+@media screen and (max-width:87.5rem){
     .postList{
         width: 110%;
         min-width: 426px
     }
     
     .QAChart,
+    .questionPost,
     .writePost{
         width: 90%;
         min-width: 426px;
     }
 
     .rightChart{
-        min-width: 200px;
+        min-width: 12.5rem;
     }
     .newBoard{
         left: 70px;
@@ -626,23 +689,35 @@ body{
     }
     
 }
-@media screen and (max-width:1300px){
+/* max-width: 1300px */
+@media screen and (max-width:81.25rem){
     header{
         padding: 16px 38px ;
     }
 
 }
-
-@media screen and (max-width:900px){
+/* max-width: 900px */
+@media screen and (max-width:56.25rem){
     .realtimeSearch,
     .rightChart{
         display: none;
     }
-    .newBoard-modal{
-        left: 20px;
+    #rightMenu{
+        display: flex;
     }
+    .active{
+        display: flex;
+        background-color:#f8f8f8;
+        border-left: 0.0625rem dashed #bbbbbb;
+        padding: 2.4rem 0;
+        top: 2.375rem;
+    }
+    
     .chart{
         margin: 0 auto 0 10%;
+    }
+    .newBoard-modal{
+        left: 1.25rem;
     }
 }
 
@@ -650,24 +725,66 @@ body{
     .chart{
         margin: 0;
     }
+    .newBoard-modal{
+        min-width: 21.25rem;
+        left: 2.5rem;
+    }
 }
 
-@media screen and (max-width:376px){
-    header{
-        padding: 13px;
+/* 모바일 웹 */
+@media screen and (max-width:480px){
+    html{
+        font-size: 10px;
     }
+    header{
+        padding: 1.3rem;
+    }
+    .chart{
+        margin-left:0;
+    }
+    
     #search,
     .postCount{
         display: none;
     }
+    /* 횡 슬라이드 */
     .postList{
-        min-width: 310px;
+        min-width: 150%;
     }
-    .newBoard-modal{
-        min-width: 350px;
-        left: -20px;
+    .postHover{
+        top: -14rem;
     }
     .noPost{
-        width: 262px;
+        width: 16.375rem;
+    }
+    .newBoard-modal{
+        min-width: 25rem;
+        left: 3rem;
+    }
+    /* 문의사항 */
+    .QAChart,
+    .questionPost,
+    .writePost{
+        min-width: 150%;
+    }
+    #essential{
+        min-width: 9rem;
+    }
+    /* rightChart */
+    .active{
+        min-width: 30%;
+    }
+    .rightChart ul{
+        padding: 0 1rem 1.5rem 1rem;
+        height: auto;
+    }
+
+    .rightChart a,
+    .rightChart span{
+        font-size: 1.1rem;
+    }
+
+    .rightChart li{
+        font-size: 1rem;
     }
 }

@@ -12,9 +12,15 @@ let editBoards = document.querySelectorAll('.postMenu>i');
 const postImgs = document.querySelectorAll('.post1');
 const postContents = document.querySelectorAll('.postContent');
 const clicks = document.querySelectorAll('.post-click');
+const rightMenu = document.getElementById('rightMenu');
 
 
 //function
+//rightMenu
+rightMenu.addEventListener('click',() => {
+    document.querySelector('.rightChart').classList.toggle('active');
+})
+
 //postContent 이미지 없는 게시글
 function contentFunc(){
     for(let postContent of postContents){

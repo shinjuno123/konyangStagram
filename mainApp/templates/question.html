@@ -37,8 +37,8 @@
             </div>
             <input type="text" placeholder="검색" id="search">
             <a href="{% url 'loginSigninApp:login' %}" id="login">로그인</a>
-            <!-- <span id="signup">회원가입</span> -->
             <i class="fas fa-user"></i>
+            <i class="fas fa-bars" id="rightMenu"></i>
         </div>
     </header>
 
@@ -101,6 +101,28 @@
                 <p class="num">2</p>
                 <p class="num selectedNum">3</p>
                 <p class="next">&#62</p>
+            </div>
+        </div>
+
+        <!-- 문의사항 게시글 -->
+        <div class="questionPost">
+            <div class="Qpost-title">
+                <p class="Qtitle">문의사항 제목</p>
+                <p class="Qtime">작성일</p>
+            </div>
+            <p class="Qpost-content">
+                궁금한 점이 있습니다.<br>
+                질문 있어요.<br>
+                문의사항 있어요.<br><br>
+                내일 정말 개강인가요???ㅜㅜ
+            </p>
+            <div class="Qlist">목록</div>
+            <div class="answerPost">
+                <p class="Atitle">A. 운영자의 답변<br></p>
+                <p class="Acontent">
+                    안타깝게도 사실로 밝혀졌습니다 :(<br>
+                    문의해주셔서 감사합니다.
+                </p>
             </div>
         </div>
 
