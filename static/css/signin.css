@@ -1,0 +1,360 @@
+body{
+    background: #fafafa;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+/* 로고 */
+#header{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.logo{
+    margin: 0px;
+}
+
+a {
+    text-decoration: none ;
+    cursor: pointer;
+}
+
+.logo_text {
+    font-size: 40px;
+	font-weight: bold;
+    font-style: italic;
+    color:  #FF8A3D;
+    padding-bottom: 10px;
+}
+/* #FF8A3D */
+.explain_text {
+    font-size: 20px;
+    color:black;
+    padding-bottom: 20px;
+    font-weight: normal;
+}
+
+/* 데이터 입력 */
+.details{
+    border-radius: 20px;
+    border: 1px solid #bbbbbb;
+    width: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.input_box {
+    position: relative;
+    flex-direction: column;
+    padding: 0px;
+    margin: 5px 0px;
+}
+
+#input2 {
+    display: none;
+}
+
+#input3 {
+    display: none;
+}
+
+#userid,
+#userpw,
+#signin_btn {
+    width: 332px;
+    height: 52px;
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+    margin-bottom: 10px;
+
+}
+
+.input_box_detail{
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+#signin_btn {
+    background-color: #FF8A3D;
+    border: 1px solid #FF8A3D;
+    padding: 10px 15px;
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#userid::placeholder,
+#userpw::placeholder {
+    color: #bbbbbb;
+    font-size: 13px;
+}
+
+#showIcon{
+    position: absolute;
+    margin-left: 2px;
+    top: 50%;
+    transform: translate(-170%,-100%);
+    color: #bbbbbb;
+    cursor: pointer;
+}
+/* login_details */
+.login_details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.line {
+    width: 330px;
+    margin-bottom: 20px;
+}
+
+.find,
+.signUp {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.find>a {
+    color: black;
+}
+
+.signUp>a {
+    color: #FF8A3D;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.find_box {
+    width: 332px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 15px;
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+
+#find_id {
+    width: 160px;
+    color: #FF8A3D;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 3px solid #FF8A3D;
+    text-align: center;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+#find_id_on{
+    width: 160px;
+    color: #bbbbbb;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 0px;
+    padding-bottom: 5px;
+}
+
+#find_pw {
+    width: 160px;
+    color: #bbbbbb;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 0px;
+    padding-bottom: 5px;
+}
+
+#find_pw_on{
+    width: 160px;
+    color: #FF8A3D;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 3px solid #FF8A3D;
+    text-align: center;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+#username {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    
+}
+
+#username::placeholder {
+    color: #bbbbbb;
+    font-size: 13px;
+}
+
+#signedupId {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    
+}
+
+#signedupId::placeholder {
+    color: #bbbbbb;
+    font-size: 13px;
+}
+
+#useremail {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+}
+
+#useremail::placeholder {
+    color: #bbbbbb;
+    font-size: 13px;
+}
+
+#idfind_btn {
+    background-color: #FF8A3D;
+
+    width: 332px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #FF8A3D;
+    padding: 10px 15px;
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    cursor:pointer;
+}
+
+#pwfind_btn {
+    background-color: #FF8A3D;
+
+    width: 332px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #FF8A3D;
+    padding: 10px 15px;
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    cursor:pointer;
+}
+
+.input_box1 {
+    border-radius: 20px;
+    border: 1px solid #bbbbbb;
+    width: 400px;
+    height: 360px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.username {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    
+}
+
+.useremail {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+}
+#input2,
+#input3{
+    display: none;
+}

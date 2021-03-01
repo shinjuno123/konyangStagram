@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/createpostpage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dropzone.css' %}">
+    <title>게시물 작성 페이지</title>
+</head>
+
+<body>
+    <!-- 게시물 작성 -->
+    <div class="writePost">
+        <p class="postform">게시물 작성</p>
+        <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <select name="board" name="board">
+                {% for bulletin_board in bulletin_boards %}
+                <option class="options" value="{{bulletin_board.board_name}}">{{bulletin_board.board_name}}</option>
+                {% endfor %}                
+            </select>
+            <script>
+                function getParameterByName(name) {
+                    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                            results = regex.exec(location.search);
+                    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                }
+            
+                //console.log(getParameterByName('board'));
+                document.querySelectorAll(".options").forEach(tag=>{
+                    if(tag.innerText === getParameterByName('board')){
+                        tag.setAttribute("selected","selected")
+                    }
+                });
+            </script>
+            <div class="title">
+                <p class="title-txt">제목</p>
+                <input name="title" type="text" id="titleId" placeholder="제목을 입력해 주세요">
+            </div>
+            <div class="writer">
+                <p class="writer-txt">작성자</p>
+                <input name="writer" type="text" id="writerId" placeholder="이름을 입력해 주세요">
+            </div>
+            <div class="content">
+                <p class="content-txt">내용</p>
+                <textarea name="contentName" id="contentId" cols="30" rows="10"></textarea>
+            </div>
+            <!-- <p>
+                <span>이미지 업로드:</span>
+                <input type="file" id="selectFile" name="filename">
+            </p> -->
+            <div id="drop-zone">
+                <input name="file-zone" type="file" id="drop-zone__input">
+            </div>
+            <input id="write" type="submit" value="작성">
+        </form>
+    </div>
+
+    <script src="../static/js/createpostpage.js"></script>
+    <script src="{% static 'js/dragAndDrop.js' %}"></script>
+</body>
+
+</html>
