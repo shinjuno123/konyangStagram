@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/boardpage.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/bc1f5db172.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Konstargram</title>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="{% url 'mainApp:mainPage' %}"><img src="" alt="">로고</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="{% url 'boardApp:question-and-answer' %}">문의사항</a>
+        </div>
+        <div class="header-right">
+            <div class="realtimeSearch">
+                <span class="realtimeSearch-span">
+                    실시간 인기 검색어
+                    <i class="fas fa-caret-down"></i>
+                </span>
+                <div class="realtimeSearch-dropdown">
+                    <a href="#" id="s1">삼색이</a>
+                    <a href="#" id="s2">야통이</a>
+                    <a href="#" id="s3">무</a>
+                </div>
+            </div>
+            <input type="text" placeholder="검색" id="search">
+            <a href="{% url 'loginSigninApp:login' %}" id="login">로그인</a>
+            <i class="fas fa-user"></i>
+            <i class="fas fa-bars" id="rightMenu"></i>
+        </div>
+    </header>
+
+    <section class="chart">
+        <!-- 문의사항 게시판 -->
+        <div class="QAChart">
+            <div class="board">
+                <p class="board-txt">문의사항 게시판</p>
+            </div>
+            <ul class="postChart">
+                <li>
+                    <div>
+                        <p class="Qcount">4</p>
+                        <p class="postTitle">질문 있습니다~!</p>
+                        <p>new</p>
+                    </div>
+                    <div>
+                        <p class="writeTime">2021.02.24</p>
+                        <p class="postCount">답변 2</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="Qcount">3</p>
+                        <p class="postTitle">문의사항 있습니다~!</p>
+                        <p>new</p>
+                    </div>
+                    <div>
+                        <p class="writeTime">2021.02.23</p>
+                        <p class="postCount">답변 1</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="Qcount">2</p>
+                        <p class="postTitle">심심해요!</p>
+                        <p></p>
+                    </div>
+                    <div>
+                        <p class="writeTime">2021.02.22</p>
+                        <p class="postCount">답변 0</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="Qcount">1</p>
+                        <p class="postTitle">불편해요!</p>
+                        <p></p>
+                    </div>
+                    <div>
+                        <p class="writeTime">2021.02.21</p>
+                        <p class="postCount">답변 1</p>                            
+                    </div>
+                </li>
+            </ul>
+            <div class="Q-write">글쓰기</div>
+            <div class="pageNum">
+                <p class="prev">&#60</p>
+                <p class="num">1</p>
+                <p class="num">2</p>
+                <p class="num selectedNum">3</p>
+                <p class="next">&#62</p>
+            </div>
+        </div>
+
+        <!-- 문의사항 게시글 -->
+        <div class="questionPost">
+            <div class="Qpost-title">
+                <p class="Qtitle">문의사항 제목</p>
+                <p class="Qtime">작성일</p>
+            </div>
+            <p class="Qpost-content">
+                궁금한 점이 있습니다.<br>
+                질문 있어요.<br>
+                문의사항 있어요.<br><br>
+                내일 정말 개강인가요???ㅜㅜ
+            </p>
+            <div class="Qlist">목록</div>
+            <div class="answerPost">
+                <p class="Atitle">A. 운영자의 답변<br></p>
+                <p class="Acontent">
+                    안타깝게도 사실로 밝혀졌습니다 :(<br>
+                    문의해주셔서 감사합니다.
+                </p>
+            </div>
+        </div>
+
+        <!-- 문의사항 작성 -->
+        <div class="writePost">
+            <p id="Q-postform">문의사항 작성</p>
+            <form class="Qpostform">
+                <div class="title">
+                    <p class="title-txt">제목</p>
+                    <input type="text" id="titleId" placeholder="*제목을 입력해 주세요.">
+                </div>
+                <div class="content">
+                    <p class="content-txt">내용</p>
+                    <textarea name="contentName" id="contentId" cols="30" rows="10" placeholder="*내용을 입력해 주세요."></textarea>
+                </div>
+                <div class="password">
+                    <p class="password-txt">암호</p>
+                    <input type="text" id="passwordId" placeholder="비공개를 원하시면 암호를 입력해 주세요.">
+                </div>
+                <div>
+                    <div id="essential">*는 필수 입력 사항</div>
+                    <input id="write" type="button" value="작성">
+                </div>
+            </form>
+        </div>
+        <!-- Right Chart -->
+        <ul class="rightChart">
+            <ul class="noticeBoard">
+                <a href="{% url 'boardApp:boardPage' %}"><i class="fas fa-clipboard"></i>전체 게시판</a>
+                <li id="a2">의료IT공학과</li>
+                <li id="a3">간호학과</li>
+                <li id="a4">의공학과</li>
+                <li id="a4">안녕</li>
+                <li id="a4">안녕</li>
+            </ul>
+
+            <ul class="notice">
+                <span><i class="fas fa-exclamation-triangle"></i>공지사항</span>
+                <li id="n2">수강신청</li>
+                <li id="n3">등록금 납부</li>
+            </ul>
+
+            <ul class="topProject">
+                <span><i class="fas fa-fire"></i>인기 프로젝트</span>
+                <li id="hp1">의료IT 프로젝트</li>
+                <li id="hp2">의료IT 프로젝트</li>
+                <li id="hp3">의료IT 프로젝트</li>
+            </ul>
+
+            <ul class="question">
+                <a href="{% url 'boardApp:question-and-answer' %}"><i class="fas fa-question-circle"></i>문의사항</a>
+                <li id="q2">문의사항 게시판</li>
+            </ul>
+        </ul>
+    </section>
+
+    <!-- Floating Button -->
+    <button class="btn_chat">
+        <i class="far fa-comments"></i>
+    </button>
+
+    <div class="chatArea">
+        <div class="infoArea">
+            <span class="chat-room-name">의료IT공학과 채팅방</span>
+            <button class="chatClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-contents"></div>
+        <div class="inputArea">
+            <input class="input-txt" type="text">
+            <button class="enter-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="{% static 'js/question.js' %}"></script>
+</body>
+</html>

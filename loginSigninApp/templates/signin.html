@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>로그인</title>
+
+    <link rel="stylesheet" href="{% static 'css/signin.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+</head>
+
+<body>
+    <section id="container">
+        <header id="header">
+            <section class="inner">
+                <h1 class="logo">
+                    <a href="signin.html">
+                        <div class="logo_text">Together</div>
+                    </a>
+                    <div class="explain_text">함께하는 즐거움을 느껴봐요!</div>
+                </h1>
+            </section>
+        </header>
+
+        <div class="details" id="input_box">
+            <div class="input_box" id="input_box">
+                <div class="input_box_detail">
+                    <form>
+                        <input type="text" placeholder="아이디를 입력하세요." id="userid" name="user_id">
+                        <div class="password-box">
+                            <input type="password" placeholder="비밀번호를 입력하세요." id="userpw" name="user_pw">
+                            <i class="far fa-eye-slash" id="showIcon"></i>
+                        </div>
+                        <input type="submit" value="로그인" id="signin_btn" onclick="">
+                    </form>
+                </div>
+                <div class="login_details">
+                    <hr class="line" size="1" color="#bbbbbb">
+
+                    <div class="find">
+                        <a id="find_idpw">아이디/비밀번호 찾기</a>
+                    </div>
+
+                    <div class="signUp">
+                        <span>계정이 아직 없으신가요? </span>
+                        <a href="{% url 'loginSigninApp:signup' %}">회원가입</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+         <!-- 아이디 찾기 -->
+         <form class="input_box1" id="input2">
+            <div class="find_box">
+                <a id="find_id" >아이디 찾기</a>
+                <a id="find_pw" >비밀번호 찾기</a>
+            </div>
+            <input type="text" placeholder="이름을 입력하세요." class="username">
+            <input type="text" placeholder="가입한 이메일을 입력하세요." class="useremail">
+            <input type="submit" value="아이디 찾기" id="idfind_btn" onclick="">
+        </form>
+
+        <!-- 비밀번호 찾기 -->
+        <form class="input_box1" id="input3">
+            <div class="find_box">
+                <a id="find_id_on" >아이디 찾기</a>
+                <a id="find_pw_on" >비밀번호 찾기</a>
+            </div>
+            <input type="text" placeholder="가입한 아이디를 입력하세요." id="signedupId">
+            
+            <input type="text" placeholder="가입한 이메일을 입력하세요." class="useremail">
+            <input type="submit" value="비밀번호 찾기" id="pwfind_btn" onclick="">
+        </form>
+
+
+    </section>
+
+    <script src="{% static 'js/signin.js' %}"></script>
+</body>
+
+</html>

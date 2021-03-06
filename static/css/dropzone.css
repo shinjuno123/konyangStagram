@@ -1,0 +1,10 @@
+#drop-zone{
+    width: 600px;
+    height: 200px;
+    cursor: pointer;
+    background-color: aqua;
+}
+
+#drop-zone__input{
+    display: none;
+}

@@ -1,0 +1,790 @@
+body{
+    height: auto;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* 로고 옆 게시판 추가 */
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left > i {
+    color: #ff8a3d;
+    padding-right: 0.3125rem;
+    cursor: default;
+}
+
+.header-left > i:nth-child(4) {
+    display: none;
+}
+
+#logo-board{
+    cursor: pointer;
+}
+#login{
+    font-size: 0.75rem;
+}
+#rightMenu{
+    display: none;
+    color: #ff8a3d;
+    margin-left: 0.8rem;
+}
+
+
+
+
+
+
+/* 전체 게시판 */
+.centerChart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+
+.postList{
+    padding: 0.625rem 0.625rem 2.1875rem 0.625rem;
+    width: 50rem;
+    max-width: 50rem;
+    margin-left: auto;
+    max-height: 23.05rem;
+    border-bottom: 0.0625rem dashed #bbbbbb;
+}
+
+.postList .board-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.postList .board-click{
+    margin: 0.9375rem 0.3125rem;
+    cursor: pointer;
+}
+
+
+.postList .postTitle{
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.postList .postExplain{
+    font-size: 0.8125rem;
+}
+
+.postList .postCount{
+    font-size: 0.8125rem;
+    margin-right: 0.625rem;
+    color: #ff8a3d;
+}
+
+
+/* 횡슬라이드 */
+.postList .postChart {
+    background-color: white;
+    border: 1px solid rgba(0,0,0,0.09);
+    margin-left: auto;
+    padding: 1.25rem;
+    padding-bottom: 0.625rem;
+    display: flex;
+    width: auto;
+	overflow-x: auto;
+	overflow-y: hidden;
+    border-radius: 0.625rem;
+    height: 16.375rem;
+}
+
+
+.postList .postChart::-webkit-scrollbar {
+    height: 0.5rem;
+  }
+.postList .postChart::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.postList .postChart::-webkit-scrollbar-thumb {
+  border-radius: 0.1875rem;
+  background-color:transparent;
+}
+.postList .postChart:hover::-webkit-scrollbar-thumb {
+    background-color: #bbbbbb;
+}
+.postList .postChart::-webkit-scrollbar-button {
+  width: 0.3125rem;
+}
+
+.postList .post-click{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 1.25rem;
+}
+
+.postList .post-click>img,
+.postList .post-click>p:nth-child(1){
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 0.625rem;
+    margin-bottom: 0.3125rem;
+}
+.postList .post-click>p:nth-child(1){
+    padding:  2.375rem 0.625rem;
+    border: 0.0625rem solid #bbbbbb;
+    text-align: left;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+/* 
+.postList:nth-child(1) .post-click>p:nth-child(1){
+    background-color: lightblue;
+}
+
+.postList:nth-child(2) .post-click>p:nth-child(1){
+    background-color:lightcoral;
+}
+
+.postList:nth-child(3) .post-click>p:nth-child(1){
+    background-color:lightseagreen;
+}
+
+.postList:nth-child(4) .post-click>p:nth-child(1){
+    background-color:black;
+    color: white;
+} */
+
+
+
+/* postHover */
+.post-click .postHover{
+    display: none;
+    flex-direction: column;
+    transition: all 0.2s ease;
+    position: relative;
+    bottom: 13.8125rem;
+    height: 12.5625rem;
+    cursor: pointer;
+    
+}
+
+.post-click .postHover .post-top,
+.post-click .postHover .post-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: rgba(256, 256, 256, 0.5);
+}
+
+.post-click .postHover .post-top{
+    margin-bottom: auto;
+    border-bottom:0.0625rem solid rgba(0, 0, 0, 0.09);
+}
+
+.post-click .postHover .post-bottom{
+    border-top: 0.0625rem solid rgba(0, 0, 0, 0.09);
+}
+
+.post-click i,
+.post-click .postComment{
+    font-size: 0.75rem;
+    font-weight:normal;
+}
+
+
+/* 게시판 메뉴(게시물 추가, 게시판 삭제) */
+.postList .postMenu{
+    display: flex;
+    align-items: center;
+}
+
+.postList .postMenu>i{
+    display: flex;
+    color: #ff8a3d;
+    cursor: pointer;
+}
+.postList .postMenu>i:hover{
+    color:gray;
+}
+
+.postList .editBoard{
+    display: none;
+    position: relative;
+    bottom: 16.25rem;
+    justify-content: space-evenly;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 6.25rem 0 8.4375rem 0.3125rem;
+    border: 0.0625rem solid rgba(0, 0, 0, 0.09);
+    border-radius: 0.625rem;
+}
+
+.postList .editBoard>p{
+    transition: all 0.3s ease;
+}
+
+.postList .editBoard>p:hover{
+    background-color: rgba(256, 256, 256, 0.5);
+    color: #ff8a3d;
+    cursor: pointer;
+    padding: 0.625rem 1.25rem;
+    border: 0.125rem solid #ff8a3d;
+    border-radius: 3.125rem;
+    transition: all 0.2s ease;
+    height: 3rem;
+
+}
+
+
+/* 새 게시판 만들기 */
+.newBoard{
+    background-color: #ff8a3d;
+    color: white;
+    font-weight: bold;
+    border: 0.125rem solid #ff8a3d;
+    border-radius: 3.125rem;
+    padding: 0.625rem 1.25rem;
+    margin: 1.25rem auto 0 auto;
+    position: relative;
+    left: 6.25rem;
+    cursor: pointer;
+    width: 10rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.newBoard:hover{
+    background-color: white;
+    color: #ff8a3d;
+    transition: all 0.3s ease;
+}
+
+/* 새 게시판 모달 창 만들기 */
+#modal {
+    display: none;
+    position:relative;
+    width:100%;
+    z-index:1;
+  }
+  
+  #modal h2 {
+    margin:0;   
+  }
+  
+  #modal .newBoard-modal {
+    width:23.4375rem;
+    display: flex;
+    flex-direction: column;
+    padding:1.875rem;
+    background:#fff;
+    position: relative;
+    bottom: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.625rem;
+  }
+
+  .newBoard-modal>div{
+      display: flex;
+      justify-content: space-between;
+  }
+
+  #modal_close_btn{
+      transition: all 0.3s ease;
+      font-size: 1.125rem;
+  }
+  
+  #modal_close_btn:hover{
+      cursor: pointer;
+      color: #ff8a3d;
+      transition: all 0.3s ease;
+  }
+
+  #newBoard-title{
+    margin: 1.25rem 0 0.3125rem 0;
+    padding: 0.3125rem;
+    font-size: 0.9375rem;
+  }
+
+  #newBoard-explain{
+    margin-bottom: 0.625rem;
+    padding: 0.3125rem;
+    font-size: 0.9375rem;
+  }
+
+  #newBoard-title::placeholder,
+  #newBoard-explain::placeholder{
+    font-size: 0.9375rem;
+  }
+
+  #newBoard-title:focus,
+  #newBoard-explain:focus{
+      border: 0px;
+      outline: 0.09375rem  solid #ff8a3d;
+  }
+
+  
+  #modal .modal_layer {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.5);
+    z-index:-1;
+  }      
+
+
+#add_btn{
+    padding: 0.3125rem 0.625rem;
+    margin-left: auto;
+    cursor: pointer;
+    background-color: #ff8a3d;
+    color: white;
+    border: 0.125rem solid #ff8a3d;
+    border-radius: 0.1875rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+#add_btn:hover{
+    background-color: white;
+    color: #ff8a3d;
+    transition: all 0.3s ease;
+}
+
+.noPost{
+    display: flex;
+    font-size: 0.8125rem;
+    width: 46.875rem;
+    height: 13.75rem;
+    align-items: center;
+    padding-bottom: 0.625rem;
+    justify-content: center;
+}
+
+
+/* 문의사항 게시판 */
+.QAChart{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 1.25rem;
+    padding: 1.875rem;
+    width: 50rem;
+    margin-left: auto;
+}
+
+.QAChart .board{
+    font-size: 1.25rem;
+    border-bottom: 0.1875rem solid #bbbbbb;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.625rem 0.625rem 0.9375rem 0.625rem;
+    margin-bottom: 0.125rem;
+}
+
+.QAChart .postChart{
+    display: flex;
+    flex-direction: column;
+    list-style-type:initial;
+    border-top: 0.0625rem solid #bbbbbb;
+}
+
+.QAChart .postChart>li,
+.QAChart .postChart>li>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.QAChart .postChart>li>div>i{
+    display: none;
+}
+
+.QAChart .postChart>li{
+    border-bottom: 0.0625rem solid #bbbbbb;
+    padding: 0.625em;
+}
+
+.QAChart .postChart .postTitle{
+    margin-left: 0.625em;
+}
+
+/* 게시물 번호 */
+.QAChart .postChart>li>div:nth-child(1)>p:nth-child(1){
+    font-size: 0.8125rem;
+    width: 1.5625rem;
+    padding: auto;
+    text-align: center;
+}
+
+/* 게시물 제목 */
+.QAChart .postChart>li>div:nth-child(1)>p:nth-child(2){
+    font-size: 0.9375rem;
+    cursor: pointer;
+}
+
+/* new 표시 */
+.QAChart .postChart>li>div:nth-child(1)>p:nth-child(3){ 
+    font-size: 0.625rem;
+    color: #ff8a3d;
+    margin-left: 0.625rem;
+    line-height: 1.125rem;
+}
+
+/* 게시물 작성일 */
+.QAChart .postChart>li>div:nth-child(2)>p:nth-child(1){
+    margin: 0 1.25rem;
+    font-size: 0.8125rem;
+}
+.postCount{
+    font-size: 0.625rem;
+    color: #bbbbbb;
+    line-height: 1.25rem;
+
+}
+
+/* 문의사항 글쓰기 버튼 */
+.Q-write,
+.Qlist{
+    margin: 0.9375rem 0 0 auto;
+    transition: all 0.3s ease;
+    font-size: 0.8125rem;
+    padding: 0.3125rem 0.625rem;
+    border: 1px solid #ff8a3d;
+    background-color: #ff8a3d;
+    color: white;
+    border-radius: 0.125rem;
+}
+
+.Q-write:hover,
+.Qlist:hover{
+    cursor: pointer;
+    color: #ff8a3d;
+    transition: all 0.3s ease;
+    border: 0.0625rem solid #ff8a3d;
+    background-color: white;
+}
+
+/* 문의사항 게시판 페이지 번호 */
+.QAChart .pageNum{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.QAChart .pageNum .prev,
+.QAChart .pageNum .next{
+    border: 0.0625rem solid #bbbbbb;
+    border-radius: 30%;
+    padding: 0.3125rem 0.46875rem;
+    margin: 0 0.3125rem;
+    font-size: 0.625rem;
+    color: #bbbbbb; 
+    cursor: pointer;
+}
+
+.QAChart .pageNum .num{
+    font-size: 0.9375rem;
+    margin: 0 0.3125rem;
+    cursor: pointer;
+}
+
+/* 문의사항 게시글 상세 */
+.questionPost .Qpost-title{
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 1.25rem;
+    font-size: 1.25rem;
+    border-top: 2px solid #bbbbbb;
+    border-bottom: 1px solid #bbbbbb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+.questionPost .Qpost-title .Qtime{
+    font-size: 0.8rem;
+}
+.questionPost .Qpost-content{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1.25rem;
+    font-size: 1rem;
+    border-bottom: 2px solid #bbbbbb;
+    min-height: 15.625rem;
+    line-height: 1.5rem;
+}
+
+.questionPost .answerPost{
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    border: 1px dashed #bbbbbb;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+}
+
+.questionPost .answerPost .Atitle{
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+/* 문의사항 작성*/
+.questionPost{
+    display: none;
+    flex-direction: column;  
+    margin-left: auto;
+    width: 50rem;
+}
+.writePost { 
+    display: none;
+    flex-direction: column;  
+    background-color: white;
+    border-radius: 1.25rem;
+    padding: 1.875rem;  
+    width: 50rem;
+    height: auto;
+    margin-left: auto;
+}
+
+#Q-postform{
+    padding: 0.625rem;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #ff8a3d;
+    margin: 0 0 1.25rem 0;
+    font-weight: normal;
+}
+
+.writePost div{
+    display: flex;
+    margin-left: auto;
+}
+.writePost p{
+    margin-right: 0.625rem;
+    font-size: 0.8125rem;
+    line-height: 1.625rem;
+}
+
+.writePost>form >div p{
+    min-width: 2rem;
+}
+
+#titleId,
+#contentId,
+#passwordId{
+    border: 0.0625rem solid #bbbbbb;
+    padding: 0.3125rem;
+    font-size: 0.8125rem;
+    width: 50rem;
+    border-radius: 0.3125rem;
+}
+
+#titleId::placeholder,
+#contentId::placeholder,
+#passwordId::placeholder{
+    color: #bbbbbb;
+    font-size: 0.8125rem;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#titleId:focus,
+#contentId:focus,
+#passwordId:focus{
+    border: 0px;
+    outline: 0.09375rem solid #ff8a3d;
+}
+
+#write {
+    /* margin-left: auto; */
+    background-color: #ff8a3d;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9375rem;
+    width: 3.75rem;
+    height: 2.1875rem;
+    border: 0.125rem solid #ff8a3d;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    margin-top: 0.625rem;
+    transition: all 0.3s ease;
+}
+
+#write:hover{
+    background-color: white;
+    color: #ff8a3d;
+    transition: all 0.3s ease;
+}
+
+.centerChart:nth-child(3) .board-click {
+    line-height: 1.75rem;
+}
+
+.centerChart:nth-child(3) .postChart i{
+    color: #bbbbbb;
+}
+
+#essential{
+    font-size: 0.625rem;
+    color: #ff8a3d;
+    width: 6.25rem;
+    line-height: 2.1875rem;
+    margin: 0.625rem 0 0 auto;
+}
+
+#contentId{
+    min-height: 15.625rem;
+}
+
+/* rightChart 전체게시판 */
+
+.rightChart a{
+    cursor:pointer;
+    font-size: 1.125rem;
+    border-bottom: 2px solid #ff8a3d;
+    margin-bottom: 0.25rem;
+}
+/*rightChart 선택 */
+.rightChart a:hover{
+    font-weight: bold;
+}
+
+/* 문의사항 페이지  선택 */
+.selectedNum{
+    color: #ff8a3d;
+}
+
+/* 게시판 안의 게시물들 */
+#posts{
+    display: none;
+}
+
+
+/* pc웹 사이즈 조정 */
+/* max-width: 1400px */
+@media screen and (max-width:87.5rem){
+    .postList{
+        width: 110%;
+        min-width: 426px
+    }
+    
+    .QAChart,
+    .questionPost,
+    .writePost{
+        width: 90%;
+        min-width: 426px;
+    }
+
+    .rightChart{
+        min-width: 12.5rem;
+    }
+    .newBoard{
+        left: 70px;
+    }
+    .newBoard-modal{
+        left: 80px;
+    }
+    
+}
+/* max-width: 1300px */
+@media screen and (max-width:81.25rem){
+    header{
+        padding: 16px 38px ;
+    }
+
+}
+/* max-width: 900px */
+@media screen and (max-width:56.25rem){
+    .realtimeSearch,
+    .rightChart{
+        display: none;
+    }
+    #rightMenu{
+        display: flex;
+    }
+    .active{
+        display: flex;
+        background-color:#f8f8f8;
+        border-left: 0.0625rem dashed #bbbbbb;
+        padding: 2.4rem 0;
+        top: 2.375rem;
+    }
+    
+    .chart{
+        margin: 0 auto 0 10%;
+    }
+    .newBoard-modal{
+        left: 1.25rem;
+    }
+}
+
+@media screen and (max-width:600px){
+    .chart{
+        margin: 0;
+    }
+    .newBoard-modal{
+        min-width: 21.25rem;
+        left: 2.5rem;
+    }
+}
+
+/* 모바일 웹 */
+@media screen and (max-width:480px){
+    html{
+        font-size: 10px;
+    }
+    header{
+        padding: 1.3rem;
+    }
+    .chart{
+        margin-left:0;
+    }
+    
+    #search,
+    .postCount{
+        display: none;
+    }
+    /* 횡 슬라이드 */
+    .postList{
+        min-width: 150%;
+    }
+    .postHover{
+        top: -14rem;
+    }
+    .noPost{
+        width: 16.375rem;
+    }
+    .newBoard-modal{
+        min-width: 25rem;
+        left: 3rem;
+    }
+    /* 문의사항 */
+    .QAChart,
+    .questionPost,
+    .writePost{
+        min-width: 150%;
+    }
+    #essential{
+        min-width: 9rem;
+    }
+    /* rightChart */
+    .active{
+        min-width: 30%;
+    }
+    .rightChart ul{
+        padding: 0 1rem 1.5rem 1rem;
+        height: auto;
+    }
+
+    .rightChart a,
+    .rightChart span{
+        font-size: 1.1rem;
+    }
+
+    .rightChart li{
+        font-size: 1rem;
+    }
+}
